@@ -1,0 +1,426 @@
+// HEADER
+.nav-container {
+  position: fixed;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(249, 249, 249, 0.15);
+  background: #171717;
+  box-shadow: 0px 4px 30.3px 0px rgba(0, 0, 0, 0);
+  backdrop-filter: blur(16.5px);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  justify-content: space-between;
+  max-width: 1140px;
+  width: 100%;
+  z-index: 1;
+}
+
+.nav-title {
+  color: #f9f9f9;
+  text-align: center;
+  font-family: 'Nata Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 3vw;
+}
+
+.nav-item {
+  color: #f9f9f9;
+  text-align: center;
+  font-family: 'Nata Sans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  border: 1px solid rgba(249, 249, 249, 0.3);
+  max-height: 73px;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  padding: 18px 20px;
+}
+
+.nav-item:active {
+  background: #3057ff;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  text-align: center;
+  font-family: 'Nata Sans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  background: #3057ff;
+  padding: 14.5px 30px;
+}
+
+// MAIN
+
+// ILLUS BRAND
+
+.illus-brand {
+  margin-top: 210px;
+  margin-bottom: 100px;
+}
+
+.illus-brand-container {
+}
+
+.illus-brand-title {
+  color: #3057ff;
+  text-align: center;
+  font-family: 'Nata Sans';
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  max-width: 1562px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.illus-brand-title-white {
+  color: #f9f9f9;
+}
+
+.illus-brand-text {
+  color: #f9f9f9;
+  text-align: center;
+  font-family: 'Nata Sans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 420;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+
+.illus-brand-btn {
+  color: #f9f9f9;
+  text-align: center;
+  font-family: 'Nata Sans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 18px 20px;
+  background: #3057ff;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.illus-brand-video {
+  max-width: 1200px;
+  max-height: 333px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 40px;
+  background-color: #3057ff;
+}
+
+// ILLUS SOLUTION
+
+.illus-solution {
+  position: relative;
+  padding: 0 100px;
+  border-bottom: 2px solid rgba(249, 249, 249, 0.3);
+}
+
+.titles-illus-solution {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 84px;
+}
+
+.title-illus-solution {
+  color: #3057ff;
+  font-family: 'Nata Sans';
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  max-width: 916px;
+}
+
+.title-illus-solution-while {
+  color: #f9f9f9;
+}
+
+.subtile-illus-solution {
+  color: #f9f9f9;
+  font-family: 'Nata Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 420;
+  line-height: normal;
+  max-width: 602px;
+}
+
+.list-illus-solution-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 240px;
+  margin-bottom: 100px;
+}
+
+.block-illus-solution {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.block-list-illus-solution {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title-block-list-illus-solution {
+  color: #3057ff;
+  font-family: 'Nata Sans';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  max-width: 400px;
+}
+
+.text-block-list-illus-solution {
+  color: #f9f9f9;
+  font-family: 'Nata Sans';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 420;
+  line-height: normal;
+  max-width: 400px;
+}
+
+.img-phone-illus-solution {
+  position: absolute;
+  max-width: 450px;
+  max-height: 684px;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.phone-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  max-width: 1400px;
+  max-height: 400px;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(48, 87, 255, 0.4) 0%,
+    rgba(48, 87, 255, 0) 80%
+  );
+  transform: translateX(-50%);
+  filter: blur(60px);
+  z-index: -1;
+}
+
+// ABOUT ME
+
+.about-me {
+  padding: 120px 100px;
+  z-index: 1;
+}
+
+.container-about-me {
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-about-me-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-block-about-me {
+  color: #3057ff;
+  font-family: 'Nata Sans';
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+}
+
+.fullname-block-about-me {
+  color: #f9f9f9;
+  font-family: 'Nata Sans';
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 740;
+  line-height: normal;
+  text-transform: uppercase;
+  display: flex;
+  gap: 32px;
+  margin-bottom: 8px;
+}
+
+.info-block-about-me {
+  color: #f9f9f9;
+  font-family: 'Nata Sans';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 420;
+  line-height: normal;
+  max-width: 550px;
+  margin-bottom: 220px;
+}
+
+.btn-block-about-me {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f9f9f9;
+  text-align: center;
+  font-family: 'Nata Sans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 18px 20px;
+  background-color: #3057ff;
+  max-width: 194px;
+}
+
+.arrow-block-about-me {
+  max-width: 36px;
+  max-height: 36px;
+  width: 100%;
+  height: 100%;
+}
+
+.about-me-block-frilancer {
+  display: flex;
+  align-items: end;
+  gap: 24px;
+}
+
+.info-frilancer-about-me {
+  display: flex;
+  gap: 20px;
+}
+
+.block-info-frilancer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.number-info-frilancer {
+  color: #f9f9f9;
+  font-family: 'Nata Sans';
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.text-info-frilancer {
+  color: #f9f9f9;
+  font-family: 'Nata Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 420;
+}
+
+// MY WORKS
+
+// WORK WITH
+
+.work-with {
+  margin-top: 80px;
+}
+
+.title-work-with {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  color: #3057ff;
+  font-family: 'Nata Sans';
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.title-work-with-white {
+  color: #f9f9f9;
+}
+
+.container-wort-with-img {
+  width: 100%;
+  height: 100%;
+  background: url('../assets/images/work-with-background.png'), no-repeat;
+  overflow: hidden;
+}
+
+.container-work-with-img {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+}
+
+.carousel-container {
+  width: 200%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.carousel-track {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  animation: carousel-container 20s linear infinite;
+}
+
+@keyframes carousel-container {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
