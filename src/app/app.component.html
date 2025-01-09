@@ -36,7 +36,7 @@
       </ul>
     </nav>
     <button class="nav-btn" (click)="openModal()">
-      lets start
+      let's start
       <img
         class="nav-img"
         src="../assets/images/arrow-up-right.svg"
@@ -49,6 +49,7 @@
   <main>
     <!-- SECTION ILLUST-BRAND -->
     <section id="illus-brand" class="illus-brand">
+      <div class="cycle-shadow-top-left"></div>
       <div class="illus-brand-container">
         <h2 class="illus-brand-title">
           Unique <span class="illus-brand-title-white">Illustrations</span> for
@@ -64,6 +65,7 @@
         </button>
         <video class="illus-brand-video" src=""></video>
       </div>
+      <div class="cycle-shadow-bottom-right"></div>
     </section>
 
     <!-- SECTION ILLUST-SOLUTION -->
@@ -150,35 +152,39 @@
             unique, branded illustrations and creatives for websites, social
             media, blogs, and advertising.
           </p>
-          <button
-            class="btn-block-about-me"
-            (click)="scrollToSection('footer')"
-          >
-            contacts
-            <img
-              class="arrow-block-about-me"
-              src="../assets/images/arrow-up-right.svg"
-              alt=""
-            />
-          </button>
-        </div>
-        <div class="about-me-block-frilancer">
-          <div class="info-frilancer-about-me">
-            <div class="block-info-frilancer">
-              <p class="number-info-frilancer">9</p>
-              <p class="text-info-frilancer">Years of Experience</p>
-            </div>
-            <div class="block-info-frilancer">
-              <p class="number-info-frilancer">65</p>
-              <p class="text-info-frilancer">Happy Clients</p>
+          <div class="block-about-me-fidback">
+            <button
+              class="btn-block-about-me"
+              (click)="scrollToSection('footer')"
+            >
+              contacts
+              <img
+                class="arrow-block-about-me"
+                src="../assets/images/arrow-up-right.svg"
+                alt=""
+              />
+            </button>
+            <div class="info-frilancer-about-me">
+              <div class="block-info-frilancer">
+                <p class="number-info-frilancer">120+</p>
+                <p class="text-info-frilancer">Projects Completed</p>
+              </div>
+              <div class="block-info-frilancer">
+                <p class="number-info-frilancer">19+</p>
+                <p class="text-info-frilancer">Years of Experience</p>
+              </div>
+              <div class="block-info-frilancer">
+                <p class="number-info-frilancer">65+</p>
+                <p class="text-info-frilancer">Happy Clients</p>
+              </div>
             </div>
           </div>
-          <img
-            class="photo-frilancer-about-me"
-            src="../assets/images/photo-frilancer.png"
-            alt=""
-          />
         </div>
+        <img
+          class="photo-frilancer-about-me"
+          src="../assets/images/photo-frilancer.png"
+          alt=""
+        />
       </div>
     </section>
 
@@ -194,9 +200,47 @@
             >watch my behance</a
           >
         </div>
-        <div>
-          <div>
-            <img src="" alt="" />
+        <div
+          class="container-swiper-blure"
+          *ngIf="imagesWork[currentIndex]"
+          [@fade]
+        >
+          <div class="blure-container-my-work">
+            <img
+              class="img-blure-work"
+              [src]="imagesWork[currentIndex].blured"
+              alt=""
+            />
+          </div>
+          <img
+            class="image-work-frilancer"
+            [src]="imagesWork[currentIndex].main"
+            alt=""
+            [@fade]
+          />
+        </div>
+
+        <div class="container-description-img-work-navigation">
+          <div class="container-description-work">
+            <p class="title-description">
+              {{ imagesWork[currentIndex].title }}
+            </p>
+            <p class="subtitle-description">
+              {{ imagesWork[currentIndex].description }}
+            </p>
+          </div>
+
+          <div class="container-navigation-work">
+            <div
+              class="cucle-navigation-work"
+              [class.active-nav-img]="currentIndex === 0"
+              (click)="changeImage(0)"
+            ></div>
+            <div
+              class="cucle-navigation-work"
+              [class.active-nav-img]="currentIndex === 1"
+              (click)="changeImage(1)"
+            ></div>
           </div>
         </div>
       </div>
@@ -276,14 +320,14 @@
                   >
                 </p>
                 <button
-                  class="btn-price-work"
+                  class="btn-price-work first-btn-price-work"
                   (click)="openModal()"
                   (mousedown)="onMouseDown()"
                   (mouseup)="onMouseUp()"
                   (mousedown)="setActiveCard(0)"
                   (mouseup)="setActiveCard(-1)"
                 >
-                  LETS START
+                  let's start
                 </button>
                 <ul class="list-info-best-personal-work">
                   <p class="features-price-work">Features</p>
@@ -331,7 +375,7 @@
               </div>
             </li>
             <li
-              class="card-price-work"
+              class="card-price-work secord-card-price-work"
               [ngClass]="{ active: activeCardIndex === 1 }"
             >
               <div class="container-info-card-price-work">
@@ -352,7 +396,7 @@
                   (mousedown)="setActiveCard(1)"
                   (mouseup)="setActiveCard(-1)"
                 >
-                  LETS START
+                  let's start
                 </button>
                 <ul class="list-info-best-personal-work">
                   <p class="features-price-work">Features</p>
@@ -431,7 +475,7 @@
                   (mousedown)="setActiveCard(2)"
                   (mouseup)="setActiveCard(-1)"
                 >
-                  LETS START
+                  let's start
                 </button>
                 <ul class="list-info-best-personal-work">
                   <p class="features-price-work">Features</p>
@@ -511,115 +555,63 @@
       <div class="container-image-work">
         <div class="container-work-img">
           <div class="container-carusel-work-img">
-            <div class="item-img-carusel">
+            <div
+              *ngFor="let image of images"
+              class="item-img-carusel"
+              (click)="openModalImg(image.src, image.description)"
+            >
               <img
                 class="image-caruse-work"
-                src="../assets/images/work-illus/adobe-allus.png"
-                alt=""
+                [src]="image.src"
+                [alt]="image.alt"
               />
               <div class="title-work-image">
-                <p class="description-carusel-work">Description</p>
-                <img src="../assets/images/arrow-up-right.svg" alt="" />
-              </div>
-            </div>
-            <div class="item-img-carusel">
-              <img
-                class="image-caruse-work"
-                src="../assets/images/work-illus/adobe.png"
-                alt=""
-              />
-              <div class="title-work-image">
-                <p class="description-carusel-work">Description</p>
-                <img src="../assets/images/arrow-up-right.svg" alt="" />
-              </div>
-            </div>
-            <div class="item-img-carusel">
-              <img
-                class="image-caruse-work"
-                src="../assets/images/work-illus/api.png"
-                alt=""
-              />
-              <div class="title-work-image">
-                <p class="description-carusel-work">Description</p>
-                <img src="../assets/images/arrow-up-right.svg" alt="" />
-              </div>
-            </div>
-            <div class="item-img-carusel">
-              <img
-                class="image-caruse-work"
-                src="../assets/images/work-illus/lend-api.png"
-                alt=""
-              />
-              <div class="title-work-image">
-                <p class="description-carusel-work">Description</p>
-                <img src="../assets/images/arrow-up-right.svg" alt="" />
-              </div>
-            </div>
-            <div class="item-img-carusel">
-              <img
-                class="image-caruse-work"
-                src="../assets/images/work-illus/nvidia.png"
-                alt=""
-              />
-              <div class="title-work-image">
-                <p class="description-carusel-work">Description</p>
-                <img src="../assets/images/arrow-up-right.svg" alt="" />
+                <p class="description-carusel-work">{{ image.description }}</p>
+                <img src="assets/images/arrow-up-right.svg" alt="" />
               </div>
             </div>
           </div>
+          <!-- MODAL ICON IMAGE -->
+          <div
+            *ngIf="isModalOpen && currentImage && currentImageDescription"
+            class="modal-img show"
+            (click)="closeModalImg()"
+          >
+            <div class="modal-content" (click)="$event.stopPropagation()">
+              <img [src]="currentImage" alt="Modal Image" />
+              <button class="close-btn" (click)="closeModalImg()">
+                <img
+                  class="close-modal-img"
+                  src="../assets/images/x.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <div class="description-link-in-frilance">
+              <p class="description-image">{{ currentImageDescription }}</p>
+              <a
+                href="https://www.behance.net/voronkov-art
+                "
+                target="_blank"
+                class="link-behance-img"
+                >watch in behance</a
+              >
+            </div>
+          </div>
+
           <div class="container-carusel-work-img">
-            <div class="item-img-carusel">
+            <div
+              *ngFor="let image of images"
+              class="item-img-carusel"
+              (click)="openModalImg(image.src, image.description)"
+            >
               <img
                 class="image-caruse-work"
-                src="../assets/images/work-illus/adobe-allus.png"
-                alt=""
+                [src]="image.src"
+                [alt]="image.alt"
               />
               <div class="title-work-image">
-                <p class="description-carusel-work">Description</p>
-                <img src="../assets/images/arrow-up-right.svg" alt="" />
-              </div>
-            </div>
-            <div class="item-img-carusel">
-              <img
-                class="image-caruse-work"
-                src="../assets/images/work-illus/adobe.png"
-                alt=""
-              />
-              <div class="title-work-image">
-                <p class="description-carusel-work">Description</p>
-                <img src="../assets/images/arrow-up-right.svg" alt="" />
-              </div>
-            </div>
-            <div class="item-img-carusel">
-              <img
-                class="image-caruse-work"
-                src="../assets/images/work-illus/api.png"
-                alt=""
-              />
-              <div class="title-work-image">
-                <p class="description-carusel-work">Description</p>
-                <img src="../assets/images/arrow-up-right.svg" alt="" />
-              </div>
-            </div>
-            <div class="item-img-carusel">
-              <img
-                class="image-caruse-work"
-                src="../assets/images/work-illus/lend-api.png"
-                alt=""
-              />
-              <div class="title-work-image">
-                <p class="description-carusel-work">Description</p>
-                <img src="../assets/images/arrow-up-right.svg" alt="" />
-              </div>
-            </div>
-            <div class="item-img-carusel">
-              <img
-                class="image-caruse-work"
-                src="../assets/images/work-illus/nvidia.png"
-                alt=""
-              />
-              <div class="title-work-image">
-                <p class="description-carusel-work">Description</p>
+                <p class="description-carusel-work">{{ image.description }}</p>
                 <img src="../assets/images/arrow-up-right.svg" alt="" />
               </div>
             </div>
@@ -676,11 +668,19 @@
           >
           <div class="btn-start-and-to-top">
             <button class="btn-start-footer" (click)="openModal()">
-              lets start
-              <img src="../assets/images/arrow-up-right.svg" alt="" />
+              let's start
+              <img
+                class="img-btn-footer"
+                src="../assets/images/arrow-up-right.svg"
+                alt=""
+              />
             </button>
             <button class="btn-to-top-footer" (click)="scrollToTop()">
-              <img src="../assets/images/arrow-up.svg" alt="" />
+              <img
+                class="img-btn-to-top-footer"
+                src="../assets/images/arrow-up.svg"
+                alt=""
+              />
             </button>
           </div>
         </div>
@@ -701,43 +701,63 @@
           (click)="closeModal()"
         />
       </div>
-      <form class="form-modal-icon">
-        <div class="email-block-modal-icon">
-          <label class="label-email-modal-icon" for="email">Your email</label>
-          <input
-            class="inp-email-modal-icon"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="your@gmail.com"
-          />
-        </div>
-        <div class="container-selector-modal-icon">
-          <label class="label-selector-modal-icon" for="price"
-            >choose pack</label
+      @if (message) {
+        <h2 class="successful">Successful</h2>
+      } @else {
+        <form class="form-modal-icon" (ngSubmit)="submitForm()" #form="ngForm">
+          <div class="email-block-modal-icon">
+            <label class="label-email-modal-icon" for="email">Your email</label>
+            <input
+              class="inp-email-modal-icon"
+              type="email"
+              name="email"
+              id="email"
+              [(ngModel)]="email"
+              #emailInput="ngModel"
+              placeholder="your@gmail.com"
+              required
+              email
+            />
+            <div
+              *ngIf="emailInput.invalid && emailInput.touched"
+              class="error-message"
+            >
+              Please enter a valid email.
+            </div>
+          </div>
+
+          <div class="container-selector-modal-icon">
+            <label class="label-selector-modal-icon" for="price"
+              >Choose pack</label
+            >
+            <select
+              class="selector-modal-icon"
+              name="price"
+              id="price"
+              [(ngModel)]="selectedPrice"
+              #priceInput="ngModel"
+              required
+            >
+              <option class="option-selector-modal-icon" value="800">
+                $800
+              </option>
+              <option class="option-selector-modal-icon" value="1200">
+                $1200
+              </option>
+              <option class="option-selector-modal-icon" value="1600">
+                $1600
+              </option>
+            </select>
+          </div>
+          <button
+            class="btn-sub-modal-icon"
+            type="submit"
+            [disabled]="form.invalid"
           >
-          <select
-            class="selector-modal-icon"
-            name="price"
-            id="price"
-            [(ngModel)]="selectedPrice"
-          >
-            <option class="option-selector-modal-icon" value="#" disabled>
-              Choose
-            </option>
-            <option class="option-selector-modal-icon" value="800">$800</option>
-            <option class="option-selector-modal-icon" value="1200">
-              $1200
-            </option>
-            <option class="option-selector-modal-icon" value="1600">
-              $1600
-            </option>
-          </select>
-        </div>
-        <button class="btn-sub-modal-icon" type="submit">
-          lets start <img src="../assets/images/arrow-up-right.svg" alt="" />
-        </button>
-      </form>
+            let's start <img src="../assets/images/arrow-up-right.svg" alt="" />
+          </button>
+        </form>
+      }
     </div>
   </div>
 </div>
