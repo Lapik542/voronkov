@@ -155,10 +155,24 @@ export class AppComponent {
     this.currentImageWork = this.imagesWork[index]
   }
 
+  prevSlide() {
+    this.currentIndex =
+      this.currentIndex === 0
+        ? this.imagesWork.length - 1
+        : this.currentIndex - 1
+  }
+
+  nextSlide() {
+    this.currentIndex =
+      this.currentIndex === this.imagesWork.length - 1
+        ? 0
+        : this.currentIndex + 1
+  }
+
   // FORM LOGIC
 
   email: string = ''
-  selectedPrice: string = '1200'
+  selectedPrice: string = ''
   message: boolean = false
 
   submitForm() {

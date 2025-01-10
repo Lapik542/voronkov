@@ -212,12 +212,25 @@
               alt=""
             />
           </div>
-          <img
-            class="image-work-frilancer"
-            [src]="imagesWork[currentIndex].main"
-            alt=""
-            [@fade]
-          />
+            <img
+              src="../assets/images/chevron-down-left.svg"
+              alt="Previous"
+              class="arrow-left"
+              (click)="prevSlide()"
+            />
+
+            <img
+              class="image-work-frilancer"
+              [src]="imagesWork[currentIndex].main"
+              alt=""
+              [@fade]
+            />
+            <img
+              src="../assets/images/chevron-down-right.svg"
+              alt="Next"
+              class="arrow-right"
+              (click)="nextSlide()"
+            />
         </div>
 
         <div class="container-description-img-work-navigation">
@@ -738,6 +751,14 @@
               #priceInput="ngModel"
               required
             >
+              <option
+                class="option-selector-modal-icon"
+                value=""
+                disabled
+                selected
+              >
+                Choose
+              </option>
               <option class="option-selector-modal-icon" value="800">
                 $800
               </option>
