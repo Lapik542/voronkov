@@ -263,6 +263,8 @@
           class="container-swiper-blure"
           *ngIf="imagesWork[currentIndex]"
           [@fade]
+          (touchstart)="onTouchStart($event)"
+          (touchend)="onTouchEnd($event)"
         >
           <div class="blure-container-my-work">
             <img

@@ -169,6 +169,27 @@ export class AppComponent {
         : this.currentIndex + 1
   }
 
+  touchStartX: number = 0
+  touchEndX: number = 0
+
+  onTouchStart(event: TouchEvent): void {
+    this.touchStartX = event.changedTouches[0].clientX
+  }
+
+  onTouchEnd(event: TouchEvent): void {
+    this.touchEndX = event.changedTouches[0].clientX
+    this.handleSwipe()
+  }
+
+  handleSwipe(): void {
+    const swipeDistance = this.touchEndX - this.touchStartX
+    if (swipeDistance > 50) {
+      this.prevSlide() // Свайп вліво
+    } else if (swipeDistance < -50) {
+      this.nextSlide() // Свайп вправо
+    }
+  }
+
   isMobile(): boolean {
     return window.innerWidth < 768
   }
