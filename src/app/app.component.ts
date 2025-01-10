@@ -169,6 +169,14 @@ export class AppComponent {
         : this.currentIndex + 1
   }
 
+  isMobile(): boolean {
+    return window.innerWidth < 768
+  }
+
+  isTablet(): boolean {
+    return window.innerWidth < 1200
+  }
+
   // FORM LOGIC
 
   email: string = ''
@@ -188,6 +196,8 @@ export class AppComponent {
           console.log('Form submitted successfully', response)
           this.message = true
           setTimeout(() => {
+            this.email = ''
+            this.selectedPrice = ''
             this.activeModal = false
             this.renderer.removeClass(document.body, 'active-modal')
             this.message = false

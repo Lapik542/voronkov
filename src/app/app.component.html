@@ -143,52 +143,107 @@
     <!-- SECTION ABOUT ME -->
     <section id="about-me" class="about-me">
       <div class="container-about-me">
-        <div class="block-about-me-info">
-          <p class="title-block-about-me">about me</p>
-          <p class="fullname-block-about-me">
-            <span class="first-name-about-me">dima</span
-            ><span class="second-name-aboute-me">voronkov</span>
-          </p>
-          <p class="info-block-about-me">
-            My name is Dima, and i’m an illustrator/graphic designer. i create
-            unique, branded illustrations and creatives for websites, social
-            media, blogs, and advertising.
-          </p>
-          <div class="block-about-me-fidback">
-            <button
-              class="btn-block-about-me"
-              (click)="scrollToSection('footer')"
-            >
-              contacts
+        @if (isTablet()) {
+          <div class="container-tablet-about-me">
+            <p class="title-block-about-me">about me</p>
+            <p class="fullname-block-about-me">
+              <span class="first-name-about-me">dima</span
+              ><span class="second-name-aboute-me">voronkov</span>
+            </p>
+            <div class="container-info-frelancer-about">
+              <div class="text-info-frelancer-about-me">
+                <p class="info-block-about-me">
+                  My name is Dima, and i’m an illustrator/graphic designer. i
+                  create unique, branded illustrations and creatives for
+                  websites, social media, blogs, and advertising.
+                </p>
+                <div>
+                  <div class="info-frilancer-tablet">
+                    <div class="info-frilancer-about-me">
+                      <div class="block-info-frilancer">
+                        <p class="number-info-frilancer">120+</p>
+                        <p class="text-info-frilancer">Projects Completed</p>
+                      </div>
+                      <div class="block-info-frilancer">
+                        <p class="number-info-frilancer">10+</p>
+                        <p class="text-info-frilancer">Years of Experience</p>
+                      </div>
+                      <div class="block-info-frilancer">
+                        <p class="number-info-frilancer">65+</p>
+                        <p class="text-info-frilancer">Happy Clients</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    class="btn-block-about-me"
+                    (click)="scrollToSection('footer')"
+                  >
+                    contacts
+                    <img
+                      draggable="false"
+                      class="arrow-block-about-me"
+                      src="../assets/images/arrow-up-right.svg"
+                      alt=""
+                    />
+                  </button>
+                </div>
+              </div>
               <img
                 draggable="false"
-                class="arrow-block-about-me"
-                src="../assets/images/arrow-up-right.svg"
+                class="photo-frilancer-about-me"
+                src="../assets/images/photo-frilancer.png"
                 alt=""
               />
-            </button>
-            <div class="info-frilancer-about-me">
-              <div class="block-info-frilancer">
-                <p class="number-info-frilancer">120+</p>
-                <p class="text-info-frilancer">Projects Completed</p>
-              </div>
-              <div class="block-info-frilancer">
-                <p class="number-info-frilancer">10+</p>
-                <p class="text-info-frilancer">Years of Experience</p>
-              </div>
-              <div class="block-info-frilancer">
-                <p class="number-info-frilancer">65+</p>
-                <p class="text-info-frilancer">Happy Clients</p>
+            </div>
+          </div>
+        } @else {
+          <div class="block-about-me-info">
+            <p class="title-block-about-me">about me</p>
+            <p class="fullname-block-about-me">
+              <span class="first-name-about-me">dima</span
+              ><span class="second-name-aboute-me">voronkov</span>
+            </p>
+            <p class="info-block-about-me">
+              My name is Dima, and i’m an illustrator/graphic designer. i create
+              unique, branded illustrations and creatives for websites, social
+              media, blogs, and advertising.
+            </p>
+            <div class="block-about-me-fidback">
+              <button
+                class="btn-block-about-me"
+                (click)="scrollToSection('footer')"
+              >
+                contacts
+                <img
+                  draggable="false"
+                  class="arrow-block-about-me"
+                  src="../assets/images/arrow-up-right.svg"
+                  alt=""
+                />
+              </button>
+              <div class="info-frilancer-about-me">
+                <div class="block-info-frilancer">
+                  <p class="number-info-frilancer">120+</p>
+                  <p class="text-info-frilancer">Projects Completed</p>
+                </div>
+                <div class="block-info-frilancer">
+                  <p class="number-info-frilancer">10+</p>
+                  <p class="text-info-frilancer">Years of Experience</p>
+                </div>
+                <div class="block-info-frilancer">
+                  <p class="number-info-frilancer">65+</p>
+                  <p class="text-info-frilancer">Happy Clients</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <img
-          draggable="false"
-          class="photo-frilancer-about-me"
-          src="../assets/images/photo-frilancer.png"
-          alt=""
-        />
+          <img
+            draggable="false"
+            class="photo-frilancer-about-me"
+            src="../assets/images/photo-frilancer.png"
+            alt=""
+          />
+        }
       </div>
     </section>
 
