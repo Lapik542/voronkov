@@ -211,6 +211,17 @@
   filter: blur(222.29998779296875px);
 }
 
+@media (max-width: 1919px) and (min-width: 1512px) {
+  .cycle-shadow-top-left {
+    top: -150px;
+    left: -180px;
+  }
+  .cycle-shadow-bottom-right {
+    bottom: -270px;
+    right: -240px;
+  }
+}
+
 // ILLUS SOLUTION
 
 .illus-solution {
@@ -288,7 +299,7 @@
   font-family: 'Nata Sans';
   font-size: 13px;
   font-style: normal;
-  font-weight: 420;
+  font-weight: 300;
   line-height: normal;
   max-width: 400px;
 }
@@ -320,6 +331,32 @@
   transform: translateX(-50%);
   filter: blur(60px);
   z-index: -1;
+}
+
+@media (max-width: 1919px) and (min-width: 1512px) {
+  .illus-solution {
+    padding: 0 80px;
+  }
+  .title-illus-solution {
+    font-size: 56px;
+  }
+  .subtile-illus-solution {
+    max-width: 470px;
+  }
+  .list-illus-solution-info {
+    gap: 200px;
+    margin-bottom: 114px;
+  }
+  .title-block-list-illus-solution {
+    font-size: 30px;
+  }
+  .text-block-list-illus-solution {
+    font-size: 13px;
+  }
+  .img-phone-illus-solution {
+    max-width: 440px;
+    max-height: 650px;
+  }
 }
 
 // ABOUT ME
@@ -370,7 +407,7 @@
   font-family: 'Nata Sans';
   font-size: 14px;
   font-style: normal;
-  font-weight: 420;
+  font-weight: 300;
   line-height: normal;
   max-width: 550px;
   margin-bottom: 220px;
@@ -454,6 +491,33 @@
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
+}
+
+@media (max-width: 1919px) and (min-width: 1512px) {
+  .about-me {
+    padding: 120px 80px;
+  }
+  .title-block-about-me {
+    margin-bottom: 80px;
+  }
+  .title-block-about-me,
+  .fullname-block-about-me {
+    font-size: 70px;
+  }
+  .info-block-about-me {
+    font-size: 13px;
+    margin-bottom: 140px;
+  }
+  .photo-frilancer-about-me {
+    max-width: 464px;
+    max-height: 479px;
+  }
+  .number-info-frilancer {
+    font-size: 48px;
+  }
+  .text-info-frilancer {
+    font-size: 16px;
+  }
 }
 
 // MY WORKS
@@ -553,8 +617,9 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
   margin-top: 16px;
-  padding: 0 285px;
+  max-width: 1350px;
 }
 
 .container-description-work {
@@ -597,6 +662,31 @@
 
 .cucle-navigation-work.active-nav-img {
   background-color: #f9f9f9;
+}
+
+@media (max-width: 1919px) and (min-width: 1512px) {
+  .title-block-my-works {
+    padding: 0 80px;
+  }
+  .title-my-works {
+    font-size: 70px;
+  }
+  .link-behance-my-works {
+    font-size: 18px;
+  }
+  .img-blure-work {
+    max-height: 547px;
+  }
+  .image-work-frilancer {
+    max-height: 547px;
+    max-width: 1066px;
+  }
+  .container-description-img-work-navigation {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1066px;
+    margin-top: 16px;
+  }
 }
 
 // WORK WITH
@@ -662,6 +752,19 @@
   }
 }
 
+@media (max-width: 1919px) and (min-width: 1512px) {
+  .work-with {
+    margin-top: 140px;
+  }
+  .title-work-with {
+    font-size: 36px;
+  }
+  .carousel-track img {
+    max-width: 195px;
+    max-height: 195px;
+  }
+}
+
 // PRICE WORK
 
 .price-work {
@@ -695,7 +798,7 @@
   font-family: 'Nata Sans';
   font-size: 16px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: normal;
   max-width: 722px;
 }
@@ -742,7 +845,7 @@
   font-family: 'Nata Sans';
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .price-personal-use-work {
@@ -814,8 +917,49 @@
   font-family: 'Nata Sans';
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 22px; /* 122.222% */
+}
+
+@media (max-width: 1919px) and (min-width: 1512px) {
+  .price-work {
+    padding: 0 80px;
+    padding-top: 100px;
+    padding-bottom: 125px;
+  }
+  .title-price-work {
+    font-size: 56px;
+  }
+  .subtitle-price-work {
+    font-size: 14px;
+    max-width: 642px;
+  }
+  .card-price-work {
+    padding: 32px;
+  }
+  .name-pack-price-work {
+    font-size: 20px;
+  }
+  .best-personal-use-price-work {
+    font-size: 13px;
+  }
+  .price-personal-use-work {
+    font-size: 48px;
+  }
+  .price-personal-use-work-gray,
+  .features-price-work {
+    font-size: 16px;
+  }
+  .btn-price-work {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+  .list-info-best-personal-work {
+    margin-top: 24px;
+  }
+  .description-best-personal-work {
+    font-size: 14px;
+  }
 }
 
 // FOOTER
@@ -1018,7 +1162,7 @@
   font-family: 'Nata Sans';
   font-size: 20px;
   font-style: normal;
-  font-weight: 580;
+  font-weight: 500;
   line-height: normal;
   text-decoration-line: underline;
   text-decoration-style: solid;
@@ -1049,7 +1193,7 @@
   font-family: 'Nata Sans';
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: normal;
   text-decoration-line: underline;
   text-decoration-style: solid;
@@ -1064,7 +1208,7 @@
   font-family: 'Nata Sans';
   font-size: 20px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: normal;
 }
 
@@ -1084,7 +1228,7 @@
   font-family: 'Nata Sans';
   font-size: 20px;
   font-style: normal;
-  font-weight: 580;
+  font-weight: 300;
   line-height: normal;
   text-decoration-line: underline;
   text-decoration-style: solid;
@@ -1161,6 +1305,60 @@
   max-width: 90vw;
   max-height: 90vh;
   object-fit: contain;
+}
+
+@media (max-width: 1919px) and (min-width: 1512px) {
+  .footer {
+    padding-top: 60px;
+    padding-bottom: 48px;
+  }
+  .title-footer {
+    font-size: 58px;
+  }
+  .container-work-img {
+    margin: 48px 0;
+  }
+  .image-caruse-work {
+    max-width: 258px;
+    max-height: 152px;
+    width: 100%;
+    height: 100%;
+  }
+  .title-work-image {
+    padding: 10px;
+  }
+  .description-carusel-work {
+    font-size: 18px;
+  }
+  .name-frilancer-footer {
+    font-size: 30px;
+  }
+  .info-bottom-foot {
+    padding: 0 80px;
+  }
+  .navigation-link-footer {
+    font-size: 18px;
+  }
+  .link-privace-policy,
+  .all-right-reserved {
+    font-size: 18px;
+  }
+  .footer-block-info-frilancer {
+    gap: 16px;
+  }
+  .link-frilancer-portfolio {
+    font-size: 18px;
+  }
+  .btn-start-footer {
+    font-size: 20px;
+  }
+  .modal-content {
+    max-width: 1115px;
+    max-height: 600px;
+  }
+  .description-link-in-frilance {
+    max-width: 1115px;
+  }
 }
 
 // MODAL ICON
