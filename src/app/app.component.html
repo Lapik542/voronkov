@@ -38,6 +38,7 @@
     <button class="nav-btn" (click)="openModal()">
       let's start
       <img
+        draggable="false"
         class="nav-img"
         src="../assets/images/arrow-up-right.svg"
         alt="arrow"
@@ -108,6 +109,7 @@
           </div>
           <div class="phone-shadow"></div>
           <img
+            draggable="false"
             class="img-phone-illus-solution"
             src="../assets/images/phone-illus-solution.png"
             alt=""
@@ -159,6 +161,7 @@
             >
               contacts
               <img
+                draggable="false"
                 class="arrow-block-about-me"
                 src="../assets/images/arrow-up-right.svg"
                 alt=""
@@ -181,6 +184,7 @@
           </div>
         </div>
         <img
+          draggable="false"
           class="photo-frilancer-about-me"
           src="../assets/images/photo-frilancer.png"
           alt=""
@@ -207,30 +211,34 @@
         >
           <div class="blure-container-my-work">
             <img
+              draggable="false"
               class="img-blure-work"
               [src]="imagesWork[currentIndex].blured"
               alt=""
             />
           </div>
-            <img
-              src="../assets/images/chevron-down-left.svg"
-              alt="Previous"
-              class="arrow-left"
-              (click)="prevSlide()"
-            />
+          <img
+            draggable="false"
+            src="../assets/images/chevron-down-left.svg"
+            alt="Previous"
+            class="arrow-left"
+            (click)="prevSlide()"
+          />
 
-            <img
-              class="image-work-frilancer"
-              [src]="imagesWork[currentIndex].main"
-              alt=""
-              [@fade]
-            />
-            <img
-              src="../assets/images/chevron-down-right.svg"
-              alt="Next"
-              class="arrow-right"
-              (click)="nextSlide()"
-            />
+          <img
+            draggable="false"
+            class="image-work-frilancer"
+            [src]="imagesWork[currentIndex].main"
+            alt=""
+            [@fade]
+          />
+          <img
+            draggable="false"
+            src="../assets/images/chevron-down-right.svg"
+            alt="Next"
+            class="arrow-right"
+            (click)="nextSlide()"
+          />
         </div>
 
         <div class="container-description-img-work-navigation">
@@ -266,33 +274,55 @@
           <div class="container-wort-with-img">
             <div class="carousel-container">
               <div class="carousel-track">
-                <img src="../assets/images/logo/lego-logo.png" alt="Lego" />
-                <img src="../assets/images/logo/smart-logo.png" alt="Smart" />
                 <img
+                  draggable="false"
+                  src="../assets/images/logo/lego-logo.png"
+                  alt="Lego"
+                />
+                <img
+                  draggable="false"
+                  src="../assets/images/logo/smart-logo.png"
+                  alt="Smart"
+                />
+                <img
+                  draggable="false"
                   src="../assets/images/logo/addidas-logo.png"
                   alt="Adidas"
                 />
                 <img
+                  draggable="false"
                   src="../assets/images/logo/riot-games-logo.png"
                   alt="Riot Games"
                 />
                 <img
+                  draggable="false"
                   src="../assets/images/logo/phase-one-karma-logo.png"
                   alt="Phase One Karma"
                 />
               </div>
               <div class="carousel-track">
-                <img src="../assets/images/logo/lego-logo.png" alt="Lego" />
-                <img src="../assets/images/logo/smart-logo.png" alt="Smart" />
                 <img
+                  draggable="false"
+                  src="../assets/images/logo/lego-logo.png"
+                  alt="Lego"
+                />
+                <img
+                  draggable="false"
+                  src="../assets/images/logo/smart-logo.png"
+                  alt="Smart"
+                />
+                <img
+                  draggable="false"
                   src="../assets/images/logo/addidas-logo.png"
                   alt="Adidas"
                 />
                 <img
+                  draggable="false"
                   src="../assets/images/logo/riot-games-logo.png"
                   alt="Riot Games"
                 />
                 <img
+                  draggable="false"
                   src="../assets/images/logo/phase-one-karma-logo.png"
                   alt="Phase One Karma"
                 />
@@ -333,7 +363,7 @@
                   >
                 </p>
                 <button
-                  class="btn-price-work first-btn-price-work"
+                  class="btn-price-work"
                   (click)="openModal()"
                   (mousedown)="onMouseDown()"
                   (mouseup)="onMouseUp()"
@@ -346,6 +376,7 @@
                   <p class="features-price-work">Features</p>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -356,6 +387,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -366,6 +398,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -376,6 +409,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -415,6 +449,7 @@
                   <p class="features-price-work">Features</p>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -425,6 +460,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -435,6 +471,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -445,6 +482,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -455,6 +493,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -494,6 +533,7 @@
                   <p class="features-price-work">Features</p>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -504,6 +544,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -514,6 +555,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -524,6 +566,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -534,6 +577,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -544,6 +588,7 @@
                   </li>
                   <li class="item-info-best-personal-work">
                     <img
+                      draggable="false"
                       class="img-info-best-personal-work"
                       src="../assets/images/tick.svg"
                       alt="tick"
@@ -574,13 +619,18 @@
               (click)="openModalImg(image.src, image.description)"
             >
               <img
+                draggable="false"
                 class="image-caruse-work"
                 [src]="image.src"
                 [alt]="image.alt"
               />
               <div class="title-work-image">
                 <p class="description-carusel-work">{{ image.description }}</p>
-                <img src="assets/images/arrow-up-right.svg" alt="" />
+                <img
+                  draggable="false"
+                  src="assets/images/arrow-up-right.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -591,9 +641,10 @@
             (click)="closeModalImg()"
           >
             <div class="modal-content" (click)="$event.stopPropagation()">
-              <img [src]="currentImage" alt="Modal Image" />
+              <img draggable="false" [src]="currentImage" alt="Modal Image" />
               <button class="close-btn" (click)="closeModalImg()">
                 <img
+                  draggable="false"
                   class="close-modal-img"
                   src="../assets/images/x.svg"
                   alt=""
@@ -619,13 +670,18 @@
               (click)="openModalImg(image.src, image.description)"
             >
               <img
+                draggable="false"
                 class="image-caruse-work"
                 [src]="image.src"
                 [alt]="image.alt"
               />
               <div class="title-work-image">
                 <p class="description-carusel-work">{{ image.description }}</p>
-                <img src="../assets/images/arrow-up-right.svg" alt="" />
+                <img
+                  draggable="false"
+                  src="../assets/images/arrow-up-right.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -683,6 +739,7 @@
             <button class="btn-start-footer" (click)="openModal()">
               let's start
               <img
+                draggable="false"
                 class="img-btn-footer"
                 src="../assets/images/arrow-up-right.svg"
                 alt=""
@@ -690,6 +747,7 @@
             </button>
             <button class="btn-to-top-footer" (click)="scrollToTop()">
               <img
+                draggable="false"
                 class="img-btn-to-top-footer"
                 src="../assets/images/arrow-up.svg"
                 alt=""
@@ -704,19 +762,29 @@
 
 <div class="modal" [ngClass]="{ 'active-modal': activeModal }">
   <div class="container-modal">
-    <div class="form-modal">
-      <div class="header-modal-icon">
-        <p class="title-modal-icon">lets get startED</p>
+    @if (message) {
+      <div class="container-message-success">
         <img
-          class="img-modal-icon"
-          src="../assets/images/x.svg"
-          alt="X"
-          (click)="closeModal()"
+          class="img-success"
+          src="../assets/images/tick-success.svg"
+          alt=""
         />
+        <p class="title-success">Sent successfully!</p>
+        <p class="text-success">wait for a letter from me</p>
       </div>
-      @if (message) {
-        <h2 class="successful">Successful</h2>
-      } @else {
+    } @else {
+      <div class="form-modal">
+        <div class="header-modal-icon">
+          <p class="title-modal-icon">lets get startED</p>
+          <img
+            draggable="false"
+            class="img-modal-icon"
+            src="../assets/images/x.svg"
+            alt="X"
+            (click)="closeModal()"
+          />
+        </div>
+
         <form class="form-modal-icon" (ngSubmit)="submitForm()" #form="ngForm">
           <div class="email-block-modal-icon">
             <label class="label-email-modal-icon" for="email">Your email</label>
@@ -743,42 +811,54 @@
             <label class="label-selector-modal-icon" for="price"
               >Choose pack</label
             >
-            <select
-              class="selector-modal-icon"
-              name="price"
-              id="price"
-              [(ngModel)]="selectedPrice"
-              #priceInput="ngModel"
-              required
-            >
-              <option
-                class="option-selector-modal-icon"
-                value=""
-                disabled
-                selected
+            <div class="custom-select">
+              <select
+                class="selector-modal-icon"
+                name="price"
+                id="price"
+                [(ngModel)]="selectedPrice"
+                #priceInput="ngModel"
+                required
               >
-                Choose
-              </option>
-              <option class="option-selector-modal-icon" value="800">
-                $800
-              </option>
-              <option class="option-selector-modal-icon" value="1200">
-                $1200
-              </option>
-              <option class="option-selector-modal-icon" value="1600">
-                $1600
-              </option>
-            </select>
+                <option
+                  class="option-selector-modal-icon"
+                  value=""
+                  disabled
+                  selected
+                >
+                  Choose
+                </option>
+                <option class="option-selector-modal-icon" value="800">
+                  PACK 1 (800$)
+                </option>
+                <option class="option-selector-modal-icon" value="1200">
+                  PACK 2 (1200$)
+                </option>
+                <option class="option-selector-modal-icon" value="1600">
+                  PACK 3 (1600$)
+                </option>
+              </select>
+              <img
+                src="../assets/images/chevron-down-selector.svg"
+                alt="Arrow"
+                class="custom-arrow"
+              />
+            </div>
           </div>
           <button
             class="btn-sub-modal-icon"
             type="submit"
             [disabled]="form.invalid"
           >
-            let's start <img src="../assets/images/arrow-up-right.svg" alt="" />
+            let's start
+            <img
+              draggable="false"
+              src="../assets/images/arrow-up-right.svg"
+              alt=""
+            />
           </button>
         </form>
-      }
-    </div>
+      </div>
+    }
   </div>
 </div>

@@ -86,7 +86,6 @@
   background-color: #3057ff;
   padding: 9px 30px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(249, 249, 249, 0.3);
   user-select: none;
 }
 
@@ -390,6 +389,7 @@
   line-height: normal;
   text-transform: uppercase;
   padding: 10px 20px;
+  gap: 8px;
   background-color: #3057ff;
   max-width: 194px;
   transition: all 0.3s ease;
@@ -401,8 +401,8 @@
 }
 
 .arrow-block-about-me {
-  max-width: 36px;
-  max-height: 36px;
+  max-width: 40px;
+  max-height: 40px;
   width: 100%;
   height: 100%;
   transition: all 0.3s ease;
@@ -779,11 +779,6 @@
   transition: all 0.3s ease;
 }
 
-.first-btn-price-work {
-  background: #fff;
-  color: #060606;
-}
-
 .secord-card-price-work {
   background-color: #3057ff;
 }
@@ -924,7 +919,7 @@
   font-family: 'Nata Sans';
   font-size: 24px;
   font-style: normal;
-  font-weight: 740;
+  font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
 }
@@ -965,6 +960,7 @@
 
 .item-img-carusel {
   position: relative;
+  cursor: pointer;
 }
 
 .title-work-image {
@@ -1110,7 +1106,6 @@
   text-transform: uppercase;
   display: flex;
   align-items: center;
-  border: 1px solid rgba(249, 249, 249, 0.3);
   padding: 8px 20px;
   width: 100%;
   gap: 8px;
@@ -1121,7 +1116,6 @@
 .btn-to-top-footer {
   padding: 4px 8px;
   background-color: #3057ff;
-  border: 1px solid rgba(249, 249, 249, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -1271,15 +1265,42 @@
   gap: 16px;
 }
 
+.custom-select {
+  position: relative;
+}
+
 .selector-modal-icon {
+  appearance: none;
+}
+
+.custom-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  pointer-events: none;
+  z-index: 1;
+  max-width: 40px;
+  max-height: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+.custom-select select:hover {
+  border-color: #666;
+}
+
+.selector-modal-icon {
+  width: 100%;
   background-color: transparent;
-  padding: 16px;
+  padding: 19.5px;
   color: #f9f9f9;
   font-family: 'Nata Sans';
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
-  line-height: 120%; /* 24px */
+  line-height: 120%;
   border: 1px solid rgba(223, 223, 223, 0.8);
 }
 
@@ -1323,9 +1344,36 @@
   font-family: 'Nata sans';
 }
 
-.successful {
-  font-size: 48px;
-  margin: 24px auto;
-  color: rgb(11, 176, 11);
-  font-family: 'Nata sans';
+.container-message-success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  min-height: 412px;
+  width: 100%;
+  height: 100%;
+}
+
+.title-success {
+  margin-top: 16px;
+  color: #f9f9f9;
+  text-align: center;
+  font-family: 'Nata Sans';
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.text-success {
+  color: #f9f9f9;
+  text-align: center;
+  font-family: 'Nata Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
 }

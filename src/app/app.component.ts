@@ -191,7 +191,7 @@ export class AppComponent {
             this.activeModal = false
             this.renderer.removeClass(document.body, 'active-modal')
             this.message = false
-          }, 2000)
+          }, 3200)
         },
         (error) => {
           console.error('Error submitting form', error)
