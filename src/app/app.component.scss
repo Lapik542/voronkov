@@ -106,6 +106,36 @@
   content: url('../assets/images/arrow-up-right-black.svg');
 }
 
+@media (max-width: 1511px) and (min-width: 1200px) {
+  .nav-container {
+    padding: 6px 0;
+    padding-right: 8px;
+    max-width: 797px;
+    max-height: 56px;
+    margin-top: 22px;
+  }
+  .nav-title {
+    margin-left: 10px;
+    margin-right: 12px;
+    font-size: 18px;
+  }
+  .nav-list {
+    gap: 16px;
+  }
+  .nav-item {
+    padding: 11px 16px;
+    font-size: 14px;
+  }
+  .nav-btn {
+    font-size: 14px;
+    padding: 7px 16px;
+  }
+  .nav-img {
+    max-width: 24px;
+    max-height: 24px;
+  }
+}
+
 // MAIN
 
 // ILLUS BRAND
@@ -219,6 +249,29 @@
   .cycle-shadow-bottom-right {
     bottom: -270px;
     right: -240px;
+  }
+}
+
+@media (max-width: 1511px) and (min-width: 1200px) {
+  .illus-brand {
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+  .illus-brand-title {
+    font-size: 64px;
+    max-width: 950px;
+  }
+  .illus-brand-text {
+    font-size: 16px;
+  }
+  .illus-brand-btn {
+    font-size: 14px;
+    padding: 16px;
+    margin-top: 32px;
+  }
+  .illus-brand-video {
+    max-width: 797px;
+    max-height: 223px;
   }
 }
 
@@ -356,6 +409,39 @@
   .img-phone-illus-solution {
     max-width: 440px;
     max-height: 650px;
+  }
+}
+
+@media (max-width: 1511px) and (min-width: 1200px) {
+  .illus-solution {
+    padding: 0 60px;
+  }
+  .titles-illus-solution {
+    margin-bottom: 75px;
+  }
+  .title-illus-solution {
+    max-width: 760px;
+    font-size: 48px;
+  }
+  .subtile-illus-solution {
+    max-width: 320px;
+    font-size: 12px;
+  }
+  .title-block-list-illus-solution {
+    font-size: 24px;
+    max-width: 280px;
+  }
+  .text-block-list-illus-solution {
+    font-size: 11px;
+    max-width: 280px;
+  }
+  .img-phone-illus-solution {
+    max-width: 330px;
+    max-height: 482px;
+  }
+  .list-illus-solution-info {
+    margin-bottom: 80px;
+    gap: 120px;
   }
 }
 
@@ -520,6 +606,45 @@
   }
 }
 
+@media (max-width: 1511px) and (min-width: 1200px) {
+  .about-me {
+    padding: 80px 60px;
+  }
+  .title-block-about-me {
+    margin-bottom: 40px;
+  }
+  .title-block-about-me,
+  .fullname-block-about-me {
+    font-size: 64px;
+  }
+  .info-block-about-me {
+    font-size: 13px;
+    margin-bottom: 130px;
+    max-width: 570px;
+  }
+  .photo-frilancer-about-me {
+    max-width: 413px;
+    max-height: 423px;
+  }
+  .info-frilancer-about-me {
+    gap: 16px;
+  }
+  .number-info-frilancer {
+    font-size: 40px;
+  }
+  .text-info-frilancer {
+    font-size: 14px;
+  }
+  .arrow-block-about-me {
+    max-width: 32px;
+    max-height: 32px;
+  }
+  .btn-block-about-me {
+    padding: 8px 16px;
+    font-size: 16px;
+  }
+}
+
 // MY WORKS
 
 .my-works {
@@ -643,7 +768,7 @@
   font-family: 'Nata Sans';
   font-size: 16px;
   font-style: normal;
-  font-weight: 420;
+  font-weight: 300;
   line-height: normal;
 }
 
@@ -682,10 +807,53 @@
     max-width: 1066px;
   }
   .container-description-img-work-navigation {
-    margin: 0 auto;
-    padding: 0;
     max-width: 1066px;
     margin-top: 16px;
+  }
+}
+
+@media (max-width: 1511px) and (min-width: 1200px) {
+  .title-block-my-works {
+    padding: 0 60px;
+  }
+  .title-my-works {
+    font-size: 64px;
+  }
+  .link-behance-my-works {
+    font-size: 16px;
+  }
+  .img-blure-work {
+    max-height: 354px;
+    margin-top: 30px;
+  }
+  .image-work-frilancer {
+    max-height: 424px;
+    max-width: 826px;
+  }
+  .arrow-left,
+  .arrow-right {
+    max-width: 42px;
+    max-height: 42px;
+  }
+  .arrow-left {
+    left: 9%;
+  }
+  .arrow-right {
+    right: 9%;
+  }
+  .container-description-img-work-navigation {
+    max-width: 826px;
+    margin-top: 40px;
+  }
+  .title-description {
+    font-size: 24px;
+  }
+  .subtitle-description {
+    font-size: 14px;
+  }
+  .cucle-navigation-work {
+    max-width: 12px;
+    max-height: 12px;
   }
 }
 
@@ -768,6 +936,23 @@
   }
 }
 
+@media (max-width: 1511px) and (min-width: 1200px) {
+  .work-with {
+    margin-top: 60px;
+  }
+  .title-work-with {
+    font-size: 30px;
+    margin-bottom: 16px;
+  }
+  .carousel-container {
+    padding: 15px 0;
+  }
+  .carousel-track img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
 // PRICE WORK
 
 .price-work {
@@ -820,10 +1005,6 @@
   background: #171717;
   transition: all 0.3s ease;
   width: 28%;
-
-  &.active {
-    background-color: #3057ff;
-  }
 
   .btn-price-work {
     &:active {
@@ -962,6 +1143,50 @@
   }
   .description-best-personal-work {
     font-size: 14px;
+  }
+}
+
+@media (max-width: 1511px) and (min-width: 1200px) {
+  .price-work {
+    padding: 80px 60px;
+  }
+  .title-price-work {
+    font-size: 48px;
+  }
+  .subtitle-price-work {
+    font-size: 11px;
+    max-width: 499px;
+  }
+  .card-price-work {
+    padding: 24px;
+  }
+  .name-pack-price-work {
+    font-size: 16px;
+  }
+  .best-personal-use-price-work {
+    font-size: 11px;
+  }
+  .price-personal-use-work {
+    font-size: 40px;
+  }
+  .price-personal-use-work-gray,
+  .features-price-work {
+    font-size: 11px;
+  }
+  .features-price-work {
+    margin-bottom: 8px;
+  }
+  .btn-price-work {
+    font-size: 14px;
+    margin-top: 18px;
+    padding: 11px 0;
+  }
+  .list-info-best-personal-work {
+    margin-top: 16px;
+    gap: 4px;
+  }
+  .description-best-personal-work {
+    font-size: 11px;
   }
 }
 
@@ -1364,6 +1589,84 @@
   }
 }
 
+@media (max-width: 1511px) and (min-width: 1200px) {
+  .footer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .title-footer {
+    font-size: 48px;
+  }
+  .container-work-img {
+    margin: 40px 0;
+  }
+  .image-caruse-work {
+    max-width: 198px;
+    max-height: 108px;
+    width: 100%;
+    height: 100%;
+  }
+  .title-work-image {
+    padding: 2px;
+    padding-left: 8px;
+  }
+  .description-carusel-work {
+    font-size: 11px;
+  }
+  .img-arrow-footer {
+    max-width: 20px;
+    max-height: 20px;
+  }
+  .name-frilancer-footer {
+    font-size: 24px;
+  }
+  .info-bottom-foot {
+    padding: 0 60px;
+  }
+  .navigation-link-footer {
+    font-size: 14px;
+  }
+  .link-privace-policy,
+  .all-right-reserved {
+    font-size: 14px;
+  }
+  .footer-block-info-frilancer {
+    gap: 16px;
+  }
+  .link-frilancer-portfolio {
+    font-size: 14px;
+  }
+  .btn-start-footer {
+    font-size: 14px;
+    padding: 2px 10px;
+  }
+  .img-btn-footer,
+  .img-btn-to-top-footer {
+    max-width: 28px;
+    max-height: 28p;
+  }
+  .btn-to-top-footer {
+    padding: 4px;
+  }
+  .modal-content {
+    max-width: 795px;
+    max-height: 434px;
+  }
+
+  .description-link-in-frilance {
+    max-width: 795px;
+    margin-top: 4px;
+  }
+  .description-image,
+  .link-behance-img {
+    font-size: 16px;
+  }
+  .close-modal-img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+}
+
 // MODAL ICON
 
 .container-blur {
@@ -1577,4 +1880,47 @@
   font-weight: 400;
   line-height: normal;
   text-transform: uppercase;
+}
+
+@media (max-width: 1511px) and (min-width: 1200px) {
+  .container-modal {
+    max-width: 488px;
+    padding: 24px;
+  }
+  .title-modal-icon {
+    font-size: 24px;
+  }
+  .img-modal-icon {
+    max-width: 40px;
+    max-height: 40px;
+  }
+  .form-modal-icon {
+    margin-top: 36px;
+  }
+  .label-email-modal-icon,
+  .label-selector-modal-icon {
+    font-size: 24px;
+  }
+  .inp-email-modal-icon,
+  .selector-modal-icon {
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+  .custom-arrow {
+    width: 24px;
+    height: 24px
+  }
+  .btn-sub-modal-icon {
+    padding: 10px;
+    width: 50%;
+  }
+  .btn-sub-modal-icon img {
+    width: 28px;
+    height: 28px;
+  }
+  .container-message-success {
+    padding: 0px;
+    max-width: 440px;
+    min-height: 330px;
+  }
 }
