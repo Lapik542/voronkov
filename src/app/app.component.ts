@@ -46,7 +46,7 @@ export class AppComponent {
     if (this.openModalMobile) {
       document.body.style.overflow = 'hidden'
     } else {
-      document.body.style.overflow = ''
+      document.body.style.overflow = 'auto'
     }
   }
 
@@ -54,20 +54,13 @@ export class AppComponent {
     this.activeModal = true
     this.openModalMobile = false
     this.renderer.addClass(document.body, 'active-modal')
-    if (this.openModalMobile) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
-    }
   }
 
   closeModal() {
     this.activeModal = false
     this.renderer.removeClass(document.body, 'active-modal')
-    if (this.openModalMobile) {
-      document.body.style.overflow = 'hidden'
-    } else {
-      document.body.style.overflow = ''
+    if (!this.openModalMobile) {
+      document.body.style.overflow = 'auto'
     }
   }
 
@@ -77,6 +70,7 @@ export class AppComponent {
       section.scrollIntoView({ behavior: 'smooth' })
     }
     this.openModalMobile = false
+    document.body.style.overflow = 'auto'
   }
 
   setActiveCard(index: number) {
