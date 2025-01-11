@@ -8,23 +8,13 @@ import {
   Renderer2,
   ViewChild
 } from '@angular/core'
-import { trigger, transition, style, animate } from '@angular/animations'
 import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-root',
   standalone: false,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  animations: [
-    trigger('fade', [
-      transition(':enter', [
-        style({ opacity: 0 }),
-        animate('800ms ease-in', style({ opacity: 1 }))
-      ]),
-      transition(':leave', [animate('800ms ease-out', style({ opacity: 0 }))])
-    ])
-  ]
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
   @ViewChild('swiperContainer') swiperContainer!: ElementRef
@@ -37,6 +27,7 @@ export class AppComponent {
   currentImage: string = ''
   currentImageDescription: string = ''
   currentIndex = 0
+  openModalMobile: boolean = false
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -50,14 +41,34 @@ export class AppComponent {
     this.activeBlock = document.elementFromPoint(0, 100)?.id || ''
   }
 
+  toggleMenu() {
+    this.openModalMobile = !this.openModalMobile
+    if (this.openModalMobile) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+  }
+
   openModal() {
     this.activeModal = true
+    this.openModalMobile = false
     this.renderer.addClass(document.body, 'active-modal')
+    if (this.openModalMobile) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
   }
 
   closeModal() {
     this.activeModal = false
     this.renderer.removeClass(document.body, 'active-modal')
+    if (this.openModalMobile) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
   }
 
   scrollToSection(sectionId: string): void {
@@ -65,6 +76,7 @@ export class AppComponent {
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' })
     }
+    this.openModalMobile = false
   }
 
   setActiveCard(index: number) {
@@ -184,9 +196,9 @@ export class AppComponent {
   handleSwipe(): void {
     const swipeDistance = this.touchEndX - this.touchStartX
     if (swipeDistance > 50) {
-      this.prevSlide() // Свайп вліво
+      this.prevSlide()
     } else if (swipeDistance < -50) {
-      this.nextSlide() // Свайп вправо
+      this.nextSlide()
     }
   }
 
