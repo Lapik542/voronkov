@@ -228,8 +228,8 @@ export class AppComponent {
       .subscribe(
         (response) => {
           console.log('Form submitted successfully', response)
-          this.message = true
           this.isSubmitting = false
+          this.message = true
           setTimeout(() => {
             this.email = ''
             this.selectedPrice = ''
