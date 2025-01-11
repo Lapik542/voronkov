@@ -54,6 +54,9 @@ export class AppComponent {
     this.activeModal = true
     this.openModalMobile = false
     this.renderer.addClass(document.body, 'active-modal')
+    if (!this.openModalMobile) {
+      document.body.style.overflow = 'auto'
+    }
   }
 
   closeModal() {
