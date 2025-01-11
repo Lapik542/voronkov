@@ -111,22 +111,25 @@
 }
 
 .menu-icon {
+  display: flex;
   padding: 12px 10px;
   width: 48px;
   height: 48px;
   background-color: #3057ff;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .line-burger {
   width: 100%;
   height: 2px;
   background: #fff;
+  transition: all 0.3s ease;
 }
 
 .menu-icon.active .line-burger:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(8px, 8px);
 }
 
 .menu-icon.active .line-burger:nth-child(2) {
@@ -134,7 +137,7 @@
 }
 
 .menu-icon.active .line-burger:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(8px, -7px);
 }
 
 .modal-mobile {
@@ -145,14 +148,11 @@
   height: 100%;
   background: rgb(6, 6, 6, 0.6);
   z-index: 50;
-  transition:
-    transform 0.6s ease-in-out,
-    right 0.6s ease-in-out;
+  transition: right 0.6s ease-in-out;
 }
 
 .modal-mobile.active {
   right: 0;
-  transform: translateX(0);
 }
 
 .container-modal-mobile {

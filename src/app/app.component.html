@@ -44,7 +44,7 @@
         alt="arrow"
       />
     </button>
-    <div class="menu-icon" (click)="toggleMenu()">
+    <div class="menu-icon" (click)="toggleMenu()" [ngClass]="{'active': openModalMobile}">
       <span class="line-burger"></span>
       <span class="line-burger"></span>
       <span class="line-burger"></span>
@@ -986,7 +986,7 @@
   </div>
 </div>
 
-<div class="modal-mobile" [ngClass]="{ active: openModalMobile }">
+<div class="modal-mobile" [ngClass]="{ 'active': openModalMobile }">
   <div class="container-modal-mobile">
     <div class="nav-burger-menu">
       <div
