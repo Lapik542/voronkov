@@ -44,7 +44,11 @@
         alt="arrow"
       />
     </button>
-    <div class="menu-icon" (click)="toggleMenu()" [ngClass]="{'active': openModalMobile}">
+    <div
+      class="menu-icon"
+      (click)="toggleMenu()"
+      [ngClass]="{ active: openModalMobile }"
+    >
       <span class="line-burger"></span>
       <span class="line-burger"></span>
       <span class="line-burger"></span>
@@ -884,6 +888,11 @@
 </div>
 
 <div class="modal" [ngClass]="{ 'active-modal': activeModal }">
+  @if (isSubmitting) {
+    <div class="container-reload">
+      <img class="reload-gif" src="../assets/images/reload-form.gif" alt="" />
+    </div>
+  }c
   <div class="container-modal">
     @if (message) {
       <div class="container-message-success">
@@ -971,7 +980,7 @@
           <button
             class="btn-sub-modal-icon"
             type="submit"
-            [disabled]="form.invalid"
+            [disabled]="form.invalid || isSubmitting"
           >
             let's start
             <img
@@ -986,7 +995,7 @@
   </div>
 </div>
 
-<div class="modal-mobile" [ngClass]="{ 'active': openModalMobile }">
+<div class="modal-mobile" [ngClass]="{ active: openModalMobile }">
   <div class="container-modal-mobile">
     <div class="nav-burger-menu">
       <div

@@ -28,6 +28,7 @@ export class AppComponent {
   currentImageDescription: string = ''
   currentIndex = 0
   openModalMobile: boolean = false
+  isSubmitting: boolean = false
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -219,12 +220,16 @@ export class AppComponent {
       price: this.selectedPrice
     }
 
+    if (this.isSubmitting) return
+    this.isSubmitting = true
+
     this.http
       .post('https://voronkov-back.onrender.com/submit-form', formData)
       .subscribe(
         (response) => {
           console.log('Form submitted successfully', response)
           this.message = true
+          this.isSubmitting = false
           setTimeout(() => {
             this.email = ''
             this.selectedPrice = ''
@@ -235,6 +240,7 @@ export class AppComponent {
         },
         (error) => {
           console.error('Error submitting form', error)
+          this.isSubmitting = false
         }
       )
   }
