@@ -735,7 +735,9 @@
       <p class="title-footer">LETS WORK TOGETHER</p>
       <div class="container-image-work">
         <div class="container-work-img">
-          <div class="container-carusel-work-img">
+          <div
+            class="container-carusel-work-img container-work-img-tablet container-work-img-mobile"
+          >
             <div
               *ngFor="let image of images"
               class="item-img-carusel"
@@ -752,7 +754,7 @@
                 <img
                   draggable="false"
                   class="img-arrow-footer"
-                  src="assets/images/arrow-up-right.svg"
+                  src="../assets/images/arrow-up-right.svg"
                   alt=""
                 />
               </div>
@@ -787,7 +789,9 @@
             </div>
           </div>
 
-          <div class="container-carusel-work-img">
+          <div
+            class="container-carusel-work-img container-work-img-tablet container-work-img-mobile"
+          >
             <div
               *ngFor="let image of images"
               class="item-img-carusel"
@@ -803,6 +807,7 @@
                 <p class="description-carusel-work">{{ image.description }}</p>
                 <img
                   draggable="false"
+                  class="img-arrow-footer"
                   src="../assets/images/arrow-up-right.svg"
                   alt=""
                 />
@@ -890,9 +895,10 @@
 <div class="modal" [ngClass]="{ 'active-modal': activeModal }">
   @if (isSubmitting) {
     <div class="container-reload">
-      <img class="reload-gif" src="../assets/images/reload-form.gif" alt="" />
+      <img class="reload-gif" src="../assets/images/reload-form.gif" draggable="false" alt="" />
     </div>
-  }c
+  }
+  c
   <div class="container-modal">
     @if (message) {
       <div class="container-message-success">
