@@ -35,7 +35,11 @@
         </li>
       </ul>
     </nav>
-    <button class="nav-btn" (click)="openModal()">
+    <button
+      class="nav-btn"
+      (click)="openModal()"
+      (click)="selectPack('custom', '0')"
+    >
       let's start
       <img
         draggable="false"
@@ -70,7 +74,11 @@
           Not your typical designer. Personalized graphical and illustration
           solutions for companies of every size.
         </p>
-        <button class="illus-brand-btn" (click)="openModal()">
+        <button
+          class="illus-brand-btn"
+          (click)="openModal()"
+          (click)="selectPack('custom', '0')"
+        >
           create illustration
         </button>
         <video class="illus-brand-video" src=""></video>
@@ -488,10 +496,7 @@
                 <button
                   class="btn-price-work"
                   (click)="openModal()"
-                  (mousedown)="onMouseDown()"
-                  (mouseup)="onMouseUp()"
-                  (mousedown)="setActiveCard(0)"
-                  (mouseup)="setActiveCard(-1)"
+                  (click)="selectPack('PACK 1', '800')"
                 >
                   let's start
                 </button>
@@ -561,10 +566,7 @@
                 <button
                   class="btn-price-work"
                   (click)="openModal()"
-                  (mousedown)="onMouseDown()"
-                  (mouseup)="onMouseUp()"
-                  (mousedown)="setActiveCard(1)"
-                  (mouseup)="setActiveCard(-1)"
+                  (click)="selectPack('PACK 2', '1200')"
                 >
                   let's start
                 </button>
@@ -645,10 +647,7 @@
                 <button
                   class="btn-price-work"
                   (click)="openModal()"
-                  (mousedown)="onMouseDown()"
-                  (mouseup)="onMouseUp()"
-                  (mousedown)="setActiveCard(2)"
-                  (mouseup)="setActiveCard(-1)"
+                  (click)="selectPack('PACK 3', '1600')"
                 >
                   let's start
                 </button>
@@ -868,7 +867,11 @@
             >telegram</a
           >
           <div class="btn-start-and-to-top">
-            <button class="btn-start-footer" (click)="openModal()">
+            <button
+              class="btn-start-footer"
+              (click)="openModal()"
+              (click)="selectPack('custom', '0')"
+            >
               let's start
               <img
                 draggable="false"
@@ -895,7 +898,12 @@
 <div class="modal" [ngClass]="{ 'active-modal': activeModal }">
   @if (isSubmitting) {
     <div class="container-reload">
-      <img class="reload-gif" src="../assets/images/reload-form.gif" draggable="false" alt="" />
+      <img
+        class="reload-gif"
+        src="../assets/images/reload-form.gif"
+        draggable="false"
+        alt=""
+      />
     </div>
   }
   c
@@ -944,45 +952,237 @@
               Please enter a valid email.
             </div>
           </div>
-
-          <div class="container-selector-modal-icon">
-            <label class="label-selector-modal-icon" for="price"
-              >Choose pack</label
-            >
-            <div class="custom-select">
-              <select
-                class="selector-modal-icon"
-                name="price"
-                id="price"
-                [(ngModel)]="selectedPrice"
-                #priceInput="ngModel"
-                required
+          <div class="container-card-info-price-work">
+            <div class="container-price-card">
+              <div
+                class="block-price-card"
+                [ngClass]="{ active: selectedPack === 'PACK 1' }"
+                (click)="selectPack('PACK 1', '800')"
               >
-                <option
-                  class="option-selector-modal-icon"
-                  value=""
-                  disabled
-                  selected
+                <p class="name-pack-price-card">pack 1</p>
+                <p class="price-pack-card">$800</p>
+              </div>
+              <div
+                class="block-price-card"
+                [ngClass]="{ active: selectedPack === 'PACK 2' }"
+                (click)="selectPack('PACK 2', '1200')"
+              >
+                <p class="name-pack-price-card">pack 2</p>
+                <p class="price-pack-card">$1200</p>
+              </div>
+              <div
+                class="block-price-card"
+                [ngClass]="{ active: selectedPack === 'PACK 3' }"
+                (click)="selectPack('PACK 3', '1600')"
+              >
+                <p class="name-pack-price-card">pack 3</p>
+                <p class="price-pack-card">$1600</p>
+              </div>
+              <div
+                class="block-price-card"
+                [ngClass]="{ active: selectedPack === 'custom' }"
+                (click)="selectPack('custom', '0')"
+              >
+                <p class="custom-pack-price-card">custom</p>
+              </div>
+            </div>
+            <div class="info-block-price-card">
+              @if (selectedPack === 'PACK 1') {
+                <p class="title-block-price-card">about Features PACK 1</p>
+                <ul class="list-pack-card">
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      12 illustrations per month.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      Finding a style for your blog.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      3 illustration edits free of charge.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      Communication 24/7.
+                    </p>
+                  </li>
+                </ul>
+              } @else if (selectedPack === 'PACK 2') {
+                <p class="title-block-price-card">about Features PACK 2</p>
+                <ul class="list-pack-card">
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      24 illustrations per month.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      Finding a style for your blog.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      3 illustration edits free of charge.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      Communication 24/7.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      Adapting your blog illustrations.
+                    </p>
+                  </li>
+                </ul>
+              } @else if (selectedPack === 'PACK 3') {
+                <p class="title-block-price-card">about Features PACK 3</p>
+                <ul class="list-pack-card">
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      36 illustrations per month.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      Finding a style for your blog.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      5 illustration edits free of charge.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      Communication 24/7.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      Adapting your blog illustrations.
+                    </p>
+                  </li>
+                  <li class="item-info-best-personal-work">
+                    <img
+                      draggable="false"
+                      class="img-info-best-personal-work"
+                      src="../assets/images/tick.svg"
+                      alt="tick"
+                    />
+                    <p class="description-best-personal-work">
+                      Preparing posts within one hour.
+                    </p>
+                  </li>
+                </ul>
+              } @else {
+                <textarea
+                  class="text-price-card"
+                  [(ngModel)]="customText"
+                  name="text"
+                  required
+                  #customTextRef="ngModel"
+                  placeholder="Leave your option..."
+                ></textarea>
+                <div
+                  *ngIf="customTextRef.invalid && customTextRef.touched"
+                  class="error-message"
                 >
-                  Choose
-                </option>
-                <option class="option-selector-modal-icon" value="800">
-                  PACK 1 (800$)
-                </option>
-                <option class="option-selector-modal-icon" value="1200">
-                  PACK 2 (1200$)
-                </option>
-                <option class="option-selector-modal-icon" value="1600">
-                  PACK 3 (1600$)
-                </option>
-              </select>
-              <img
-                src="../assets/images/chevron-down-selector.svg"
-                alt="Arrow"
-                class="custom-arrow"
-              />
+                  This field is required.
+                </div>
+              }
             </div>
           </div>
+
           <button
             class="btn-sub-modal-icon"
             type="submit"

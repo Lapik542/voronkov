@@ -28,7 +28,6 @@ export class AppComponent {
   currentImageDescription: string = ''
   currentIndex = 0
   openModalMobile: boolean = false
-  isSubmitting: boolean = false
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -75,25 +74,6 @@ export class AppComponent {
     }
     this.openModalMobile = false
     document.body.style.overflow = 'auto'
-  }
-
-  setActiveCard(index: number) {
-    this.activeCardIndex = index
-    if (this.activeCardIndex === 0) {
-      this.selectedPrice = '800'
-    } else if (this.activeCardIndex === 1) {
-      this.selectedPrice = '1200'
-    } else if (this.activeCardIndex === 2) {
-      this.selectedPrice = '1600'
-    }
-  }
-
-  onMouseDown() {
-    this.isActive = true
-  }
-
-  onMouseUp() {
-    this.isActive = false
   }
 
   scrollToTop() {
@@ -211,37 +191,67 @@ export class AppComponent {
   // FORM LOGIC
 
   email: string = ''
-  selectedPrice: string = ''
   message: boolean = false
+  isSubmitting: boolean = false
+  selectedPack: string = ''
+  customText: string = ''
+  selectedPrice: string = ''
+
+  selectPack(packName: string, price: string) {
+    this.selectedPack = packName
+    this.selectedPrice = price
+    if (this.selectedPack === 'custom') {
+      this.selectedPack = 'custom'
+    }
+  }
 
   submitForm() {
+    let price
+    let plan
+    if (this.selectedPack === 'custom') {
+      plan = 'Custom Plan'
+      price = this.customText
+    } else {
+      plan = this.selectedPack
+      price = this.selectedPrice
+    }
+
     const formData = {
       email: this.email,
-      price: this.selectedPrice
+      plan: plan,
+      price: price
+    }
+
+    console.log(formData)
+
+    if (this.selectedPack === 'custom' && !this.customText.trim()) {
+      alert('Please enter a custom price')
+      return
     }
 
     if (this.isSubmitting) return
     this.isSubmitting = true
 
-    this.http
-      .post('https://voronkov-back.onrender.com/submit-form', formData)
-      .subscribe(
-        (response) => {
-          console.log('Form submitted successfully', response)
-          this.isSubmitting = false
-          this.message = true
-          setTimeout(() => {
-            this.email = ''
-            this.selectedPrice = ''
-            this.activeModal = false
-            this.renderer.removeClass(document.body, 'active-modal')
-            this.message = false
-          }, 3200)
-        },
-        (error) => {
-          console.error('Error submitting form', error)
-          this.isSubmitting = false
-        }
-      )
+    this.http.post('https://voronkov-back.onrender.com/submit-form', formData).subscribe(
+      (response) => {
+        console.log('Form submitted successfully', response)
+        this.isSubmitting = false
+        this.message = true
+
+        setTimeout(() => {
+          this.email = ''
+          this.selectedPrice = ''
+          this.selectedPack = ''
+          this.customText = ''
+          this.activeModal = false
+          this.renderer.removeClass(document.body, 'active-modal')
+          this.message = false
+        }, 3200)
+      },
+      (error) => {
+        console.error('Error submitting form', error)
+        this.isSubmitting = false
+      }
+    )
   }
 }
