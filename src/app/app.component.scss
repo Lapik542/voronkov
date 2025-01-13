@@ -283,7 +283,6 @@
 
 .illus-brand {
   padding-top: 180px;
-  padding-bottom: 100px;
   position: relative;
 }
 
@@ -396,7 +395,6 @@
 @media (max-width: 1511px) and (min-width: 1200px) {
   .illus-brand {
     padding-top: 120px;
-    padding-bottom: 80px;
   }
   .illus-brand-title {
     font-size: 64px;
@@ -419,7 +417,6 @@
 @media (max-width: 1199px) and (min-width: 768px) {
   .illus-brand {
     padding-top: 128px;
-    padding-bottom: 60px;
   }
   .illus-brand-title {
     font-size: 64px;
@@ -450,7 +447,6 @@
 @media (max-width: 767px) and (min-width: 320px) {
   .illus-brand {
     padding-top: 120px;
-    padding-bottom: 50px;
   }
   .illus-brand-title {
     font-size: 36px;
@@ -488,6 +484,7 @@
 .illus-solution {
   position: relative;
   padding: 0 100px;
+  padding-top: 107px;
   border-bottom: 2px solid rgba(249, 249, 249, 0.3);
 }
 
