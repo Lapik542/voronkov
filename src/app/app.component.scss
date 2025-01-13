@@ -1513,13 +1513,29 @@
     margin-bottom: 16px;
     gap: 12px;
   }
-  .carousel-container {
+  .carousel-container-mobile {
     padding: 16px 0;
-    gap: 16px;
+    gap: 24px;
   }
-  .carousel-track img {
-    max-width: 100px;
-    max-height: 100px;
+  .carousel-track-mobile img {
+    min-width: 110px;
+    min-height: 110px;
+  }
+  .carousel-track-mobile {
+    display: flex;
+    justify-content: none;
+    width: 100%;
+    animation: carousel-container-mobile 20s linear infinite;
+    gap: 24px;
+  }
+
+  @keyframes carousel-container-mobile {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-103%);
+    }
   }
 }
 
@@ -2510,7 +2526,7 @@
     gap: 24px;
     justify-content: none;
     width: 400%;
-    animation: container-work-img-mobile 40s linear infinite;
+    animation: container-work-img-mobile 20s linear infinite;
   }
   @keyframes container-work-img-mobile {
     0% {
@@ -2615,6 +2631,7 @@
     font-size: 16px;
   }
   .link-behance-img {
+    text-align: end;
     width: 100%;
     font-size: 14px;
   }
@@ -2630,7 +2647,7 @@
 // MODAL ICON
 
 .container-blur {
-  transition: all 0.6s ease;
+  transition: all 0.4s ease;
   overflow: hidden;
   position: relative;
 }
@@ -2730,6 +2747,7 @@
 
 .container-price-card {
   display: flex;
+  border: 1px solid rgba(249, 249, 249, 0.3);
 }
 
 .block-price-card {
@@ -2741,7 +2759,6 @@
   gap: 4px;
   width: 25%;
   height: 66px;
-  border: 1px solid rgba(249, 249, 249, 0.3);
   cursor: pointer;
   transition: all 0.4s ease;
 }
@@ -2955,5 +2972,50 @@
     padding: 0px;
     max-width: 440px;
     min-height: 330px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 320px) {
+  .container-modal,
+  .modal,
+  .modal .active-modal {
+    margin: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+  .container-modal {
+    padding: 40px 16px;
+  }
+  .title-modal-icon {
+    font-size: 24px;
+  }
+  .label-email-modal-icon {
+    font-size: 20px;
+  }
+  .form-modal-icon {
+    margin-top: 18px;
+  }
+  .inp-email-modal-icon {
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+  .inp-email-modal-icon::placeholder {
+    font-size: 13px;
+  }
+  .info-block-price-card {
+    padding: 16px;
+  }
+  .title-block-price-card {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+  .text-price-card {
+    font-size: 16px;
+  }
+  .error-message {
+    font-size: 16px;
+  }
+  .container-message-success {
+    min-height: 100vh;
   }
 }

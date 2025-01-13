@@ -403,8 +403,8 @@
             work <span class="title-work-with-white">with</span>
           </p>
           <div class="container-wort-with-img">
-            <div class="carousel-container">
-              <div class="carousel-track">
+            <div class="carousel-container carousel-container-mobile">
+              <div class="carousel-track carousel-track-mobile">
                 <img
                   draggable="false"
                   src="../assets/images/logo/lego-logo.png"
@@ -431,7 +431,7 @@
                   alt="Phase One Karma"
                 />
               </div>
-              <div class="carousel-track">
+              <div class="carousel-track carousel-track-mobile">
                 <img
                   draggable="false"
                   src="../assets/images/logo/lego-logo.png"
@@ -1165,14 +1165,16 @@
                   </li>
                 </ul>
               } @else {
-                <textarea
-                  class="text-price-card"
-                  [(ngModel)]="customText"
-                  name="text"
-                  required
-                  #customTextRef="ngModel"
-                  placeholder="Leave your option..."
-                ></textarea>
+                <div>
+                  <textarea
+                    class="text-price-card"
+                    [(ngModel)]="customText"
+                    name="text"
+                    required
+                    #customTextRef="ngModel"
+                    placeholder="Leave your option..."
+                  ></textarea>
+                </div>
                 <div
                   *ngIf="customTextRef.invalid && customTextRef.touched"
                   class="error-message"
@@ -1221,7 +1223,11 @@
       </div>
     </div>
   </div>
-  <button (click)="openModal()" class="btn-nav-butger-menu">
+  <button
+    (click)="openModal()"
+    (click)="selectPack('custom', '0')"
+    class="btn-nav-butger-menu"
+  >
     let's start <img src="../assets/images/arrow-up-right.svg" alt="" />
   </button>
 </div>

@@ -53,16 +53,24 @@ export class AppComponent {
   openModal() {
     this.activeModal = true
     this.openModalMobile = false
-    this.renderer.addClass(document.body, 'active-modal')
     if (!this.openModalMobile) {
+      document.body.style.overflow = 'auto'
+    }
+    if (this.activeModal) {
+      document.body.style.overflow = 'hidden'
+    } else {
       document.body.style.overflow = 'auto'
     }
   }
 
   closeModal() {
     this.activeModal = false
-    this.renderer.removeClass(document.body, 'active-modal')
     if (!this.openModalMobile) {
+      document.body.style.overflow = 'auto'
+    }
+    if (this.activeModal) {
+      document.body.style.overflow = 'hidden'
+    } else {
       document.body.style.overflow = 'auto'
     }
   }
@@ -232,26 +240,31 @@ export class AppComponent {
     if (this.isSubmitting) return
     this.isSubmitting = true
 
-    this.http.post('https://voronkov-back.onrender.com/submit-form', formData).subscribe(
-      (response) => {
-        console.log('Form submitted successfully', response)
-        this.isSubmitting = false
-        this.message = true
+    this.http
+      .post('https://voronkov-back.onrender.com/submit-form', formData)
+      .subscribe(
+        (response) => {
+          console.log('Form submitted successfully', response)
+          this.isSubmitting = false
+          this.message = true
 
-        setTimeout(() => {
-          this.email = ''
-          this.selectedPrice = ''
-          this.selectedPack = ''
-          this.customText = ''
-          this.activeModal = false
-          this.renderer.removeClass(document.body, 'active-modal')
-          this.message = false
-        }, 3200)
-      },
-      (error) => {
-        console.error('Error submitting form', error)
-        this.isSubmitting = false
-      }
-    )
+          setTimeout(() => {
+            this.email = ''
+            this.selectedPrice = ''
+            this.selectedPack = ''
+            this.customText = ''
+            this.activeModal = false
+            this.message = false
+            if (!this.activeModal) {
+              document.body.style.overflow = 'auto'
+            }
+          }, 3200)
+        },
+        (error) => {
+          console.error('Error submitting form', error)
+          this.isSubmitting = false
+          this.renderer.removeClass(document.body, 'active')
+        }
+      )
   }
 }
