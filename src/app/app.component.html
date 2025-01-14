@@ -1166,16 +1166,14 @@
                   </li>
                 </ul>
               } @else {
-                <div>
-                  <textarea
-                    class="text-price-card"
-                    [(ngModel)]="customText"
-                    name="text"
-                    required
-                    #customTextRef="ngModel"
-                    placeholder="Leave your option..."
-                  ></textarea>
-                </div>
+                <textarea
+                  class="text-price-card"
+                  [(ngModel)]="customText"
+                  name="text"
+                  required
+                  #customTextRef="ngModel"
+                  placeholder="Leave your option..."
+                ></textarea>
                 <div
                   *ngIf="customTextRef.invalid && customTextRef.touched"
                   class="error-message"

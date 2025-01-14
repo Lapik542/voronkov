@@ -28,6 +28,59 @@ export class AppComponent {
   currentImageDescription: string = ''
   currentIndex = 0
   openModalMobile: boolean = false
+  touchStartX: number = 0
+  touchEndX: number = 0
+  email: string = ''
+  message: boolean = false
+  isSubmitting: boolean = false
+  selectedPack: string = ''
+  customText: string = ''
+  selectedPrice: string = ''
+
+  imagesWork = [
+    {
+      main: '../assets/images/test-1.png',
+      blured: '../assets/images/test-1.png',
+      title: 'Nvidia',
+      description:
+        'Once again, “How would I draw illustrations for this blog?”. This is what I got:'
+    },
+    {
+      main: '../assets/images/test-2.png',
+      blured: '../assets/images/test-2.png',
+      title: 'Adobe',
+      description:
+        'Adobe – a powerful tool for graphic designers and digital artists.'
+    }
+  ]
+
+  images = [
+    {
+      src: 'assets/images/work-illus/adobe-allus.png',
+      alt: 'Adobe Allus',
+      description: 'Adobe Allus'
+    },
+    {
+      src: 'assets/images/work-illus/adobe.png',
+      alt: 'Adobe',
+      description: 'Adobe'
+    },
+    {
+      src: 'assets/images/work-illus/api.png',
+      alt: 'API',
+      description: 'API'
+    },
+    {
+      src: 'assets/images/work-illus/lend-api.png',
+      alt: 'Lend API',
+      description: 'Lend API'
+    },
+    {
+      src: 'assets/images/work-illus/nvidia.png',
+      alt: 'NVIDIA',
+      description: 'NVIDIA'
+    }
+  ]
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -90,34 +143,6 @@ export class AppComponent {
     }
   }
 
-  images = [
-    {
-      src: 'assets/images/work-illus/adobe-allus.png',
-      alt: 'Adobe Allus',
-      description: 'Adobe Allus'
-    },
-    {
-      src: 'assets/images/work-illus/adobe.png',
-      alt: 'Adobe',
-      description: 'Adobe'
-    },
-    {
-      src: 'assets/images/work-illus/api.png',
-      alt: 'API',
-      description: 'API'
-    },
-    {
-      src: 'assets/images/work-illus/lend-api.png',
-      alt: 'Lend API',
-      description: 'Lend API'
-    },
-    {
-      src: 'assets/images/work-illus/nvidia.png',
-      alt: 'NVIDIA',
-      description: 'NVIDIA'
-    }
-  ]
-
   openModalImg(image: string, description: string): void {
     this.currentImageDescription = description
     this.currentImage = image
@@ -128,23 +153,6 @@ export class AppComponent {
     this.isModalOpen = false
     this.currentImage = ''
   }
-
-  imagesWork = [
-    {
-      main: '../assets/images/test-1.png',
-      blured: '../assets/images/test-1.png',
-      title: 'Nvidia',
-      description:
-        'Once again, “How would I draw illustrations for this blog?”. This is what I got:'
-    },
-    {
-      main: '../assets/images/test-2.png',
-      blured: '../assets/images/test-2.png',
-      title: 'Adobe',
-      description:
-        'Adobe – a powerful tool for graphic designers and digital artists.'
-    }
-  ]
 
   currentImageWork = this.imagesWork[this.currentIndex]
 
@@ -166,9 +174,6 @@ export class AppComponent {
         ? 0
         : this.currentIndex + 1
   }
-
-  touchStartX: number = 0
-  touchEndX: number = 0
 
   onTouchStart(event: TouchEvent): void {
     this.touchStartX = event.changedTouches[0].clientX
@@ -197,13 +202,6 @@ export class AppComponent {
   }
 
   // FORM LOGIC
-
-  email: string = ''
-  message: boolean = false
-  isSubmitting: boolean = false
-  selectedPack: string = ''
-  customText: string = ''
-  selectedPrice: string = ''
 
   selectPack(packName: string, price: string) {
     this.selectedPack = packName
