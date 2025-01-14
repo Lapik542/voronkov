@@ -17,7 +17,7 @@
   max-height: 73px;
   height: 100%;
   width: 100%;
-  z-index: 100;
+  z-index: 10000;
 }
 
 .nav-title {
@@ -189,7 +189,7 @@
   line-height: normal;
   text-transform: uppercase;
   background: #3057ff;
-  padding: 16px;
+  padding: 9px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1348,6 +1348,7 @@
   .title-block-my-works {
     padding: 0 16px;
     gap: 4px;
+    margin-bottom: 40px;
   }
   .title-my-works {
     font-size: 40px;
@@ -1357,6 +1358,7 @@
   }
   .blure-container-my-work {
     max-height: 100%;
+    margin: 0;
   }
   .img-blure-work {
     max-height: 100%;
@@ -1953,7 +1955,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 1000;
+  z-index: 10000000000000000000;
 }
 
 .modal-img.show {
@@ -2666,7 +2668,7 @@
   align-items: center;
   justify-content: center;
   background: rgba(6, 6, 6, 0.6);
-  z-index: 1000;
+  z-index: 100000000;
 }
 
 .modal.active-modal {
@@ -2836,6 +2838,15 @@
   gap: 8px;
 }
 
+.description-best-personal-work-form {
+  color: #f9f9f9;
+  font-family: 'Nata Sans';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 420;
+  line-height: 22px;
+}
+
 .text-price-card {
   color: #f9f9f9;
   font-family: 'Nata Sans';
@@ -2985,6 +2996,7 @@
   }
   .container-modal {
     padding: 40px 16px;
+    padding-top: 16px;
   }
   .title-modal-icon {
     font-size: 24px;
@@ -3001,6 +3013,17 @@
   }
   .inp-email-modal-icon::placeholder {
     font-size: 13px;
+  }
+  .description-best-personal-work-form {
+    font-size: 13px;
+  }
+  .block-price-card:hover {
+    background-color: #3057ff;
+    .name-pack-price-card,
+    .price-pack-card,
+    .custom-pack-price-card {
+      color: #f9f9f9;
+    }
   }
   .info-block-price-card {
     padding: 16px;

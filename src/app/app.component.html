@@ -1,65 +1,67 @@
+<!-- HEADER -->
+<header class="nav-container">
+  <h1 class="nav-title" (click)="scrollToTop()">voronkov</h1>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li
+        class="nav-item"
+        (click)="scrollToSection('illus-solution')"
+        [ngClass]="{ 'active-link': activeBlock === 'illus-solution' }"
+      >
+        <a class="link-nan">features</a>
+      </li>
+      <li
+        class="nav-item"
+        (click)="scrollToSection('about-me')"
+        [ngClass]="{ 'active-link': activeBlock === 'about-me' }"
+      >
+        <a class="link-nan">about</a>
+      </li>
+      <li
+        class="nav-item"
+        (click)="scrollToSection('my-works')"
+        [ngClass]="{ 'active-link': activeBlock === 'my-works' }"
+      >
+        <a class="link-nan">works</a>
+      </li>
+      <li
+        class="nav-item"
+        (click)="scrollToSection('price-work')"
+        [ngClass]="{ 'active-link': activeBlock === 'price-work' }"
+      >
+        <a class="link-nan">price</a>
+      </li>
+    </ul>
+  </nav>
+  <button
+    class="nav-btn"
+    (click)="openModal()"
+    (click)="selectPack('custom', '0')"
+  >
+    let's start
+    <img
+      draggable="false"
+      class="nav-img"
+      src="../assets/images/arrow-up-right.svg"
+      alt="arrow"
+    />
+  </button>
+  <div
+    class="menu-icon"
+    (click)="toggleMenu()"
+    [ngClass]="{ active: openModalMobile }"
+  >
+    <span class="line-burger"></span>
+    <span class="line-burger"></span>
+    <span class="line-burger"></span>
+  </div>
+</header>
 <!-- BLUR SITE -->
-<div class="container-blur" [ngClass]="{ 'blur-bg': activeModal }">
-  <!-- HEADER -->
-  <header class="nav-container">
-    <h1 class="nav-title" (click)="scrollToTop()">voronkov</h1>
-    <nav class="nav">
-      <ul class="nav-list">
-        <li
-          class="nav-item"
-          (click)="scrollToSection('illus-solution')"
-          [ngClass]="{ 'active-link': activeBlock === 'illus-solution' }"
-        >
-          <a class="link-nan">features</a>
-        </li>
-        <li
-          class="nav-item"
-          (click)="scrollToSection('about-me')"
-          [ngClass]="{ 'active-link': activeBlock === 'about-me' }"
-        >
-          <a class="link-nan">about</a>
-        </li>
-        <li
-          class="nav-item"
-          (click)="scrollToSection('my-works')"
-          [ngClass]="{ 'active-link': activeBlock === 'my-works' }"
-        >
-          <a class="link-nan">works</a>
-        </li>
-        <li
-          class="nav-item"
-          (click)="scrollToSection('price-work')"
-          [ngClass]="{ 'active-link': activeBlock === 'price-work' }"
-        >
-          <a class="link-nan">price</a>
-        </li>
-      </ul>
-    </nav>
-    <button
-      class="nav-btn"
-      (click)="openModal()"
-      (click)="selectPack('custom', '0')"
-    >
-      let's start
-      <img
-        draggable="false"
-        class="nav-img"
-        src="../assets/images/arrow-up-right.svg"
-        alt="arrow"
-      />
-    </button>
-    <div
-      class="menu-icon"
-      (click)="toggleMenu()"
-      [ngClass]="{ active: openModalMobile }"
-    >
-      <span class="line-burger"></span>
-      <span class="line-burger"></span>
-      <span class="line-burger"></span>
-    </div>
-  </header>
+<div
+  class="container-blur"
+  [ngClass]="{ 'blur-bg': activeModal || openModalMobile }"
+>
   <!-- MAIN -->
-
   <main>
     <!-- SECTION ILLUST-BRAND -->
     <section id="illus-brand" class="illus-brand">
@@ -997,7 +999,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       12 illustrations per month.
                     </p>
                   </li>
@@ -1008,7 +1010,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       Finding a style for your blog.
                     </p>
                   </li>
@@ -1019,7 +1021,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       3 illustration edits free of charge.
                     </p>
                   </li>
@@ -1030,7 +1032,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       Communication 24/7.
                     </p>
                   </li>
@@ -1045,7 +1047,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       24 illustrations per month.
                     </p>
                   </li>
@@ -1056,7 +1058,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       Finding a style for your blog.
                     </p>
                   </li>
@@ -1067,7 +1069,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       3 illustration edits free of charge.
                     </p>
                   </li>
@@ -1078,7 +1080,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       Communication 24/7.
                     </p>
                   </li>
@@ -1089,7 +1091,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       Adapting your blog illustrations.
                     </p>
                   </li>
@@ -1104,7 +1106,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       36 illustrations per month.
                     </p>
                   </li>
@@ -1115,7 +1117,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       Finding a style for your blog.
                     </p>
                   </li>
@@ -1126,7 +1128,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       5 illustration edits free of charge.
                     </p>
                   </li>
@@ -1137,7 +1139,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       Communication 24/7.
                     </p>
                   </li>
@@ -1148,7 +1150,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       Adapting your blog illustrations.
                     </p>
                   </li>
@@ -1159,7 +1161,7 @@
                       src="../assets/images/tick.svg"
                       alt="tick"
                     />
-                    <p class="description-best-personal-work">
+                    <p class="description-best-personal-work-form">
                       Preparing posts within one hour.
                     </p>
                   </li>
