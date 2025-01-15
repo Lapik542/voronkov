@@ -2706,14 +2706,14 @@
 .email-block-modal-icon {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  margin-bottom: 16px;
+  gap: 4px;
 }
 
 .form-modal-icon {
   margin-top: 12px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
 .label-email-modal-icon,
@@ -2828,7 +2828,7 @@
   font-family: 'Nata Sans';
   font-size: 28px;
   font-style: normal;
-  font-weight: 740;
+  font-weight: 700;
   line-height: 24px; /* 85.714% */
   text-transform: uppercase;
   margin-bottom: 16px;
@@ -2884,6 +2884,7 @@
   max-width: 210px;
   width: 100%;
   margin-left: auto;
+  margin-top: 4px;
   transition: all 0.3s ease;
 }
 
@@ -2985,6 +2986,9 @@
     padding: 0px;
     max-width: 440px;
     min-height: 330px;
+  }
+  .error-message {
+    font-size: 14px;
   }
 }
 
