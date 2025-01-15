@@ -148,7 +148,7 @@
   height: 100%;
   background: rgb(6, 6, 6, 0.6);
   z-index: 50;
-  transition: right 0.6s ease-in-out;
+  transition: right 1s ease;
 }
 
 .modal-mobile.active {
@@ -2003,7 +2003,7 @@
 }
 
 .modal-img.show {
-  display: block;
+  display: flex;
 }
 
 .modal-content {
