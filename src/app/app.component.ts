@@ -203,36 +203,22 @@ export class AppComponent {
 
   // FORM LOGIC
 
-  selectPack(packName: string, price: string) {
+  selectPack(packName: string) {
     this.selectedPack = packName
-    this.selectedPrice = price
     if (this.selectedPack === 'custom') {
       this.selectedPack = 'custom'
     }
   }
 
   submitForm() {
-    let price
-    let plan
-    if (this.selectedPack === 'custom') {
-      plan = 'Custom Plan'
-      price = this.customText
-    } else {
-      plan = this.selectedPack
-      price = this.selectedPrice
+
+    if(this.selectedPack === 'custom') {
+      this.selectedPack = this.customText
     }
 
     const formData = {
       email: this.email,
-      plan: plan,
-      price: price
-    }
-
-    console.log(formData)
-
-    if (this.selectedPack === 'custom' && !this.customText.trim()) {
-      alert('Please enter a custom price')
-      return
+      pack: this.selectedPack,
     }
 
     if (this.isSubmitting) return

@@ -36,7 +36,7 @@
   <button
     class="nav-btn"
     (click)="openModal()"
-    (click)="selectPack('custom', '0')"
+    (click)="selectPack('custom')"
   >
     let's start
     <img
@@ -79,7 +79,7 @@
         <button
           class="illus-brand-btn"
           (click)="openModal()"
-          (click)="selectPack('custom', '0')"
+          (click)="selectPack('custom')"
         >
           create illustration
         </button>
@@ -409,7 +409,7 @@
               class="carousel-container carousel-container-mac carousel-container-mobile carousel-container-tablet"
             >
               <div
-                class="carousel-track carousel-track-mac carousel-track-mobile carousel-track-tablet"
+                class="carousel-track carousel-track-mac carousel-track-mobile carousel-track-laptop  carousel-track-tablet"
               >
                 <img
                   draggable="false"
@@ -493,7 +493,7 @@
                 />
               </div>
               <div
-                class="carousel-track carousel-track-mobile carousel-track-mac carousel-track-tablet"
+                class="carousel-track carousel-track-mobile carousel-track-mac carousel-track-laptop carousel-track-tablet"
               >
                 <img
                   draggable="false"
@@ -614,7 +614,7 @@
                 <button
                   class="btn-price-work"
                   (click)="openModal()"
-                  (click)="selectPack('PACK 1', '800')"
+                  (click)="selectPack('PACK 1')"
                 >
                   let's start
                 </button>
@@ -684,7 +684,7 @@
                 <button
                   class="btn-price-work"
                   (click)="openModal()"
-                  (click)="selectPack('PACK 2', '1200')"
+                  (click)="selectPack('PACK 2')"
                 >
                   let's start
                 </button>
@@ -765,7 +765,7 @@
                 <button
                   class="btn-price-work"
                   (click)="openModal()"
-                  (click)="selectPack('PACK 3', '1600')"
+                  (click)="selectPack('PACK 3')"
                 >
                   let's start
                 </button>
@@ -988,7 +988,7 @@
             <button
               class="btn-start-footer"
               (click)="openModal()"
-              (click)="selectPack('custom', '0')"
+              (click)="selectPack('custom')"
             >
               let's start
               <img
@@ -1074,7 +1074,7 @@
               <div
                 class="block-price-card"
                 [ngClass]="{ active: selectedPack === 'PACK 1' }"
-                (click)="selectPack('PACK 1', '800')"
+                (click)="selectPack('PACK 1')"
               >
                 <p class="name-pack-price-card">pack 1</p>
                 <p class="price-pack-card">$800</p>
@@ -1082,7 +1082,7 @@
               <div
                 class="block-price-card"
                 [ngClass]="{ active: selectedPack === 'PACK 2' }"
-                (click)="selectPack('PACK 2', '1200')"
+                (click)="selectPack('PACK 2')"
               >
                 <p class="name-pack-price-card">pack 2</p>
                 <p class="price-pack-card">$1200</p>
@@ -1090,7 +1090,7 @@
               <div
                 class="block-price-card"
                 [ngClass]="{ active: selectedPack === 'PACK 3' }"
-                (click)="selectPack('PACK 3', '1600')"
+                (click)="selectPack('PACK 3')"
               >
                 <p class="name-pack-price-card">pack 3</p>
                 <p class="price-pack-card">$1600</p>
@@ -1098,7 +1098,7 @@
               <div
                 class="block-price-card"
                 [ngClass]="{ active: selectedPack === 'custom' }"
-                (click)="selectPack('custom', '0')"
+                (click)="selectPack('custom')"
               >
                 <p class="custom-pack-price-card">custom</p>
               </div>
@@ -1340,7 +1340,7 @@
   </div>
   <button
     (click)="openModal()"
-    (click)="selectPack('custom', '0')"
+    (click)="selectPack('custom')"
     class="btn-nav-butger-menu"
   >
     let's start <img src="../assets/images/arrow-up-right.svg" alt="" />
