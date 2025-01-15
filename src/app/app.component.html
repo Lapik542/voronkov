@@ -1081,7 +1081,7 @@
               </div>
               <div
                 class="block-price-card"
-                [ngClass]="{ active: selectedPack === 'PACK 2' }"
+                [ngClass]="{ 'active': selectedPack === 'PACK 2' }"
                 (click)="selectPack('PACK 2')"
               >
                 <p class="name-pack-price-card">pack 2</p>
@@ -1089,7 +1089,7 @@
               </div>
               <div
                 class="block-price-card"
-                [ngClass]="{ active: selectedPack === 'PACK 3' }"
+                [ngClass]="{ 'active': selectedPack === 'PACK 3' }"
                 (click)="selectPack('PACK 3')"
               >
                 <p class="name-pack-price-card">pack 3</p>
@@ -1097,7 +1097,7 @@
               </div>
               <div
                 class="block-price-card"
-                [ngClass]="{ active: selectedPack === 'custom' }"
+                [ngClass]="{ 'active': selectedPack === 'custom' }"
                 (click)="selectPack('custom')"
               >
                 <p class="custom-pack-price-card">custom</p>
@@ -1318,7 +1318,7 @@
   </div>
 </div>
 
-<div class="modal-mobile" [ngClass]="{ active: openModalMobile }">
+<div class="modal-mobile" [ngClass]="{ 'active': openModalMobile }">
   <div class="container-modal-mobile">
     <div class="nav-burger-menu">
       <div
