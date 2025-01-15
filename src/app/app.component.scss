@@ -1434,7 +1434,9 @@
 }
 
 .carousel-container {
-  width: 200%;
+  gap: 64px;
+  padding: 32px 0;
+  width: 400%;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -1443,9 +1445,14 @@
 
 .carousel-track {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
+  gap: 64px;
+  width: 200%;
   animation: carousel-container 40s linear infinite;
+}
+
+.carousel-track img {
+  height: 100px;
+  width: auto;
 }
 
 @keyframes carousel-container {
@@ -1453,7 +1460,7 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-101%);
   }
 }
 
@@ -1464,12 +1471,29 @@
   .title-work-with {
     font-size: 36px;
   }
-  .carousel-container {
-    padding: 18px 0;
+  .carousel-container-mac {
+    gap: 50px;
+    width: 400%;
+    padding: 24px 0;
+    justify-content: none;
   }
   .carousel-track img {
-    max-width: 195px;
-    max-height: 195px;
+    max-width: auto;
+    max-height: 190px;
+  }
+  .carousel-track-mac {
+    gap: 50px;
+    justify-content: none;
+    width: 200%;
+    animation: carousel-container-mac 40s linear infinite;
+  }
+  @keyframes carousel-container-mac {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100.8%);
+    }
   }
 }
 
@@ -1484,9 +1508,12 @@
   .carousel-container {
     padding: 15px 0;
   }
+  .carousel-track {
+    animation: carousel-container 60s linear infinite;
+  }
   .carousel-track img {
-    max-width: 150px;
-    max-height: 150px;
+    max-width: auto;
+    max-height: 120px;
   }
 }
 
@@ -1498,12 +1525,27 @@
     font-size: 24px;
     margin-bottom: 16px;
   }
-  .carousel-container {
+  .carousel-container-tablet {
+    width: 400%;
     padding: 15px 0;
+    gap: 50px;
   }
   .carousel-track img {
-    max-width: 110px;
-    max-height: 110px;
+    max-width: auto;
+    max-height: 80px;
+  }
+  .carousel-track-tablet {
+    gap: 50px;
+    width: 200%;
+    animation: carousel-container-tablet 60s linear infinite;
+  }
+  @keyframes carousel-container-tablet {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-101%);
+    }
   }
 }
 
@@ -1519,16 +1561,17 @@
   .carousel-container-mobile {
     padding: 16px 0;
     gap: 24px;
+    width: 600%;
   }
   .carousel-track-mobile img {
-    min-width: 110px;
-    min-height: 110px;
+    min-width: auto;
+    min-height: 80px;
   }
   .carousel-track-mobile {
     display: flex;
     justify-content: none;
-    width: 100%;
-    animation: carousel-container-mobile 20s linear infinite;
+    width: 400%;
+    animation: carousel-container-mobile 60s linear infinite;
     gap: 24px;
   }
 
@@ -1537,7 +1580,7 @@
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-103%);
+      transform: translateX(-100.6%);
     }
   }
 }
@@ -1960,7 +2003,7 @@
 }
 
 .modal-img.show {
-  display: flex;
+  display: block;
 }
 
 .modal-content {
