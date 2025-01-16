@@ -142,14 +142,14 @@
 }
 
 .modal-mobile {
-  position: fixed; 
+  position: fixed;
   top: 0;
   width: 100%;
   height: 100%;
   background: rgba(6, 6, 6, 0.6);
   z-index: 50;
-  transition: transform 0.4s ease-in-out; 
-  transform: translateX(100%); 
+  transition: transform 0.4s ease-in-out;
+  transform: translateX(100%);
 }
 
 .modal-mobile.active {
@@ -2951,6 +2951,10 @@
   font-family: 'Nata sans';
 }
 
+.error-message-text {
+  margin-bottom: 8px;
+}
+
 .container-message-success {
   display: flex;
   flex-direction: column;
@@ -3042,6 +3046,15 @@
   .error-message {
     font-size: 14px;
   }
+  .error-message-text {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  .text-price-card {
+    height: 96%;
+  }
 }
 
 @media (max-width: 767px) and (min-width: 320px) {
@@ -3091,6 +3104,7 @@
     margin-bottom: 4px;
   }
   .text-price-card {
+    height: 96%;
     font-size: 16px;
   }
   .error-message {
@@ -3098,5 +3112,8 @@
   }
   .container-message-success {
     min-height: 100vh;
+  }
+  .error-message-text {
+    margin-bottom: 8px;
   }
 }

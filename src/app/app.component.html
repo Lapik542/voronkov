@@ -33,11 +33,7 @@
       </li>
     </ul>
   </nav>
-  <button
-    class="nav-btn"
-    (click)="openModal()"
-    (click)="selectPack('custom')"
-  >
+  <button class="nav-btn" (click)="openModal()" (click)="selectPack('custom')">
     let's start
     <img
       draggable="false"
@@ -409,7 +405,7 @@
               class="carousel-container carousel-container-mac carousel-container-mobile carousel-container-tablet"
             >
               <div
-                class="carousel-track carousel-track-mac carousel-track-mobile carousel-track-laptop  carousel-track-tablet"
+                class="carousel-track carousel-track-mac carousel-track-mobile carousel-track-laptop carousel-track-tablet"
               >
                 <img
                   draggable="false"
@@ -981,7 +977,11 @@
             target="_blank"
             >behance</a
           >
-          <a class="link-frilancer-portfolio" href="#" target="_blank"
+          <a
+            class="link-frilancer-portfolio"
+            href="https://t.me/voronkov98
+          "
+            target="_blank"
             >telegram</a
           >
           <div class="btn-start-and-to-top">
@@ -1081,7 +1081,7 @@
               </div>
               <div
                 class="block-price-card"
-                [ngClass]="{ 'active': selectedPack === 'PACK 2' }"
+                [ngClass]="{ active: selectedPack === 'PACK 2' }"
                 (click)="selectPack('PACK 2')"
               >
                 <p class="name-pack-price-card">pack 2</p>
@@ -1089,7 +1089,7 @@
               </div>
               <div
                 class="block-price-card"
-                [ngClass]="{ 'active': selectedPack === 'PACK 3' }"
+                [ngClass]="{ active: selectedPack === 'PACK 3' }"
                 (click)="selectPack('PACK 3')"
               >
                 <p class="name-pack-price-card">pack 3</p>
@@ -1097,7 +1097,7 @@
               </div>
               <div
                 class="block-price-card"
-                [ngClass]="{ 'active': selectedPack === 'custom' }"
+                [ngClass]="{ active: selectedPack === 'custom' }"
                 (click)="selectPack('custom')"
               >
                 <p class="custom-pack-price-card">custom</p>
@@ -1292,7 +1292,7 @@
                 ></textarea>
                 <div
                   *ngIf="customTextRef.invalid && customTextRef.touched"
-                  class="error-message"
+                  class="error-message error-message-text"
                 >
                   This field is required.
                 </div>
@@ -1318,7 +1318,7 @@
   </div>
 </div>
 
-<div class="modal-mobile" [ngClass]="{ 'active': openModalMobile }">
+<div class="modal-mobile" [ngClass]="{ active: openModalMobile }">
   <div class="container-modal-mobile">
     <div class="nav-burger-menu">
       <div
