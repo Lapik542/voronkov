@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common'
 import {
+  ChangeDetectorRef,
   Component,
   ElementRef,
   HostListener,
@@ -109,13 +110,14 @@ export class AppComponent {
       src: '../assets/images/work-illus/NVIDIA.webp',
       alt: 'NVIDIA',
       description: 'NVIDIA'
-    },
+    }
   ]
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
     private renderer: Renderer2,
-    private http: HttpClient
+    private http: HttpClient,
+    private cdr: ChangeDetectorRef
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId)
   }
@@ -213,6 +215,7 @@ export class AppComponent {
           ? this.imagesWork.length - 1
           : this.currentIndex - 1
       this.fadeIn()
+      this.cdr.detectChanges() 
     }, 400)
   }
 
@@ -224,6 +227,7 @@ export class AppComponent {
           ? 0
           : this.currentIndex + 1
       this.fadeIn()
+      this.cdr.detectChanges() 
     }, 400)
   }
 
@@ -243,6 +247,7 @@ export class AppComponent {
     } else if (swipeDistance < -50) {
       this.nextSlide()
     }
+    this.cdr.detectChanges();
   }
 
   isMobile(): boolean {

@@ -1137,7 +1137,7 @@
 
 .image-work-frilancer,
 .img-blure-work {
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
   opacity: 1;
 }
 
@@ -1343,6 +1343,7 @@
     margin-top: 56px;
   }
   .container-description-work {
+    background-color: transparent;
     gap: 4px;
   }
   .title-description {
@@ -1389,8 +1390,9 @@
   .container-description-img-work-navigation {
     max-width: 100%;
     margin: 0 16px;
-    margin-top: 14px;
+    margin-top: 24px;
     align-items: start;
+    background-color: transparent;
   }
   .container-description-work {
     gap: 4px;
