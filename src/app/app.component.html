@@ -379,19 +379,6 @@
               {{ imagesWork[currentIndex].description }}
             </p>
           </div>
-
-          <div class="container-navigation-work">
-            <div
-              class="cucle-navigation-work"
-              [class.active-nav-img]="currentIndex === 0"
-              (click)="changeImage(0)"
-            ></div>
-            <div
-              class="cucle-navigation-work"
-              [class.active-nav-img]="currentIndex === 1"
-              (click)="changeImage(1)"
-            ></div>
-          </div>
         </div>
       </div>
       <!-- SECTION WORK WITH -->
@@ -849,7 +836,7 @@
       <div class="container-image-work">
         <div class="container-work-img">
           <div
-            class="container-carusel-work-img container-work-img-tablet container-work-img-mobile"
+            class="container-carusel-work-img container-work-img-mac container-work-img-laptop container-work-img-tablet container-work-img-mobile"
           >
             <div
               *ngFor="let image of images"

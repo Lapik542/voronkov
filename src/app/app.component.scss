@@ -1135,6 +1135,17 @@
   position: relative;
 }
 
+.image-work-frilancer,
+.img-blure-work {
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.image-work-frilancer.fade-out,
+.img-blure-work.fade-out {
+  opacity: 0;
+}
+
 .blure-container-my-work {
   position: relative;
   filter: blur(33.25px);
@@ -1970,18 +1981,24 @@
   overflow: hidden;
 }
 
+.image-caruse-work {
+  width: 322px;
+  height: 176px;
+}
+
 .container-work-img {
   width: 200%;
   overflow: hidden;
   align-items: center;
   display: flex;
   margin: 62px 0;
+  gap: 80px;
 }
 
 .container-carusel-work-img {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  gap: 80px;
   width: 100%;
   animation: container-work-img 40s linear infinite;
 }
@@ -1991,7 +2008,7 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-103%);
   }
 }
 
@@ -2306,10 +2323,8 @@
     margin: 48px 0;
   }
   .image-caruse-work {
-    max-width: 258px;
+    max-width: 278px;
     max-height: 152px;
-    width: 100%;
-    height: 100%;
   }
   .title-work-image {
     padding: 10px;
@@ -2346,6 +2361,17 @@
   .description-link-in-frilance {
     max-width: 1115px;
   }
+  .container-carusel-work-img {
+    animation: container-work-img-mac 40s linear infinite;
+  }
+  @keyframes container-work-img-mac {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-103.3%);
+    }
+  }
 }
 
 @media (max-width: 1511px) and (min-width: 1200px) {
@@ -2362,8 +2388,6 @@
   .image-caruse-work {
     max-width: 198px;
     max-height: 108px;
-    width: 100%;
-    height: 100%;
   }
   .title-work-image {
     padding: 2px;
@@ -2428,6 +2452,17 @@
     max-width: 40px;
     max-height: 40px;
   }
+  .container-carusel-work-img {
+    animation: container-work-img-laptop 40s linear infinite;
+  }
+  @keyframes container-work-img-laptop {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-104.3%);
+    }
+  }
 }
 
 @media (max-width: 1199px) and (min-width: 768px) {
@@ -2449,13 +2484,11 @@
   .image-caruse-work {
     min-width: 198px;
     min-height: 108px;
-    width: 100%;
-    height: 100%;
   }
   .container-carusel-work-img {
     gap: 48px;
     justify-content: none;
-    width: 100%;
+    width: 200%;
     animation: container-work-img-tablet 40s linear infinite;
   }
   @keyframes container-work-img-tablet {
@@ -2463,7 +2496,7 @@
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-104%);
+      transform: translateX(-101.9%);
     }
   }
   .title-work-image {
@@ -2566,10 +2599,11 @@
     margin: 24px 0;
     margin-bottom: 28px;
     gap: 24px;
-    width: 100%;
+    width: 400%;
   }
   .container-work-img-mobile {
     gap: 24px;
+    width: 200%;
   }
   .image-caruse-work {
     min-width: 200px;
@@ -2581,14 +2615,14 @@
     gap: 24px;
     justify-content: none;
     width: 400%;
-    animation: container-work-img-mobile 20s linear infinite;
+    animation: container-work-img-mobile 40s linear infinite;
   }
   @keyframes container-work-img-mobile {
     0% {
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-102%);
+      transform: translateX(-101.6%);
     }
   }
   .name-frilancer-footer {

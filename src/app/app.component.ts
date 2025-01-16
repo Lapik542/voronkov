@@ -39,47 +39,77 @@ export class AppComponent {
 
   imagesWork = [
     {
-      main: '../assets/images/test-1.png',
-      blured: '../assets/images/test-1.png',
-      title: 'Nvidia',
+      main: '../assets/images/my-works/adobe.webp',
+      blured: '../assets/images/my-works/adobe.webp',
+      title: 'ADOBE',
+      description:
+        'One day I saw an Adobe blog and thought, “How would I draw illustrations for this blog?”'
+    },
+    {
+      main: '../assets/images/my-works/neuron.webp',
+      blured: '../assets/images/my-works/neuron.webp',
+      title: 'NEURON AI',
+      description: 'Images for the "NEURON AI" Project Telegram Channel'
+    },
+    {
+      main: '../assets/images/my-works/nvidia.webp',
+      blured: '../assets/images/my-works/nvidia.webp',
+      title: 'NVIDIA',
       description:
         'Once again, “How would I draw illustrations for this blog?”. This is what I got:'
     },
     {
-      main: '../assets/images/test-2.png',
-      blured: '../assets/images/test-2.png',
-      title: 'Adobe',
+      main: '../assets/images/my-works/tgse.webp',
+      blured: '../assets/images/my-works/tgse.webp',
+      title: 'TGSE',
       description:
-        'Adobe – a powerful tool for graphic designers and digital artists.'
+        'A short story about the process of creating social media posts for TGSE'
+    },
+    {
+      main: '../assets/images/my-works/unexa.webp',
+      blured: '../assets/images/my-works/unexa.webp',
+      title: 'UNEXA',
+      description:
+        'A short story about the process of creating illustrations for Unexa'
     }
   ]
 
   images = [
     {
-      src: 'assets/images/work-illus/adobe-allus.png',
-      alt: 'Adobe Allus',
-      description: 'Adobe Allus'
+      src: '../assets/images/work-illus/ADOBE-1.webp',
+      alt: 'ADOBE',
+      description: 'ADOBE'
     },
     {
-      src: 'assets/images/work-illus/adobe.png',
-      alt: 'Adobe',
-      description: 'Adobe'
+      src: '../assets/images/work-illus/ADOBE.webp',
+      alt: 'ADOBE',
+      description: 'ADOBE'
     },
     {
-      src: 'assets/images/work-illus/api.png',
-      alt: 'API',
-      description: 'API'
+      src: '../assets/images/work-illus/ALCHEMY.webp',
+      alt: 'ALCHEMY',
+      description: 'ALCHEMY'
     },
     {
-      src: 'assets/images/work-illus/lend-api.png',
-      alt: 'Lend API',
-      description: 'Lend API'
+      src: '../assets/images/work-illus/LEND-API.webp',
+      alt: 'LEND API',
+      description: 'LEND API'
     },
     {
-      src: 'assets/images/work-illus/nvidia.png',
+      src: '../assets/images/work-illus/NEURON-AI.webp',
+      alt: 'NEURON AI',
+      description: 'NEURON AI'
+    },
+    {
+      src: '../assets/images/work-illus/NVIDIA-2.webp',
       alt: 'NVIDIA',
       description: 'NVIDIA'
-    }
+    },
+    {
+      src: '../assets/images/work-illus/NVIDIA.webp',
+      alt: 'NVIDIA',
+      description: 'NVIDIA'
+    },
   ]
 
   constructor(
@@ -161,18 +191,40 @@ export class AppComponent {
     this.currentImageWork = this.imagesWork[index]
   }
 
+  fadeOut() {
+    const images = document.querySelectorAll(
+      '.image-work-frilancer, .img-blure-work'
+    )
+    images.forEach((image) => image.classList.add('fade-out'))
+  }
+
+  fadeIn() {
+    const images = document.querySelectorAll(
+      '.image-work-frilancer, .img-blure-work'
+    )
+    images.forEach((image) => image.classList.remove('fade-out'))
+  }
+
   prevSlide() {
-    this.currentIndex =
-      this.currentIndex === 0
-        ? this.imagesWork.length - 1
-        : this.currentIndex - 1
+    this.fadeOut()
+    setTimeout(() => {
+      this.currentIndex =
+        this.currentIndex === 0
+          ? this.imagesWork.length - 1
+          : this.currentIndex - 1
+      this.fadeIn()
+    }, 400)
   }
 
   nextSlide() {
-    this.currentIndex =
-      this.currentIndex === this.imagesWork.length - 1
-        ? 0
-        : this.currentIndex + 1
+    this.fadeOut()
+    setTimeout(() => {
+      this.currentIndex =
+        this.currentIndex === this.imagesWork.length - 1
+          ? 0
+          : this.currentIndex + 1
+      this.fadeIn()
+    }, 400)
   }
 
   onTouchStart(event: TouchEvent): void {
@@ -211,14 +263,13 @@ export class AppComponent {
   }
 
   submitForm() {
-
-    if(this.selectedPack === 'custom') {
+    if (this.selectedPack === 'custom') {
       this.selectedPack = this.customText
     }
 
     const formData = {
       email: this.email,
-      pack: this.selectedPack,
+      pack: this.selectedPack
     }
 
     if (this.isSubmitting) return
