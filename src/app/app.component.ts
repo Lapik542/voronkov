@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common'
 import {
+  AfterViewInit,
   ChangeDetectorRef,
   Component,
   ElementRef,
@@ -19,7 +20,7 @@ import images from './images.json'
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   @ViewChild('swiperContainer') swiperContainer!: ElementRef
   isActive: boolean = false
   activeCardIndex: number | null = null
@@ -41,7 +42,6 @@ export class AppComponent {
   selectedPrice: string = ''
 
   workData = imagesWork
-
   images = images
 
   constructor(
@@ -51,6 +51,20 @@ export class AppComponent {
     private cdr: ChangeDetectorRef
   ) {
     this.isBrowser = isPlatformBrowser(this.platformId)
+  }
+
+  ngAfterViewInit(): void {
+    const videoElement =
+      document.querySelector<HTMLVideoElement>('.illus-brand-video')
+
+    if (videoElement) {
+      videoElement.autoplay = true
+      videoElement.loop = true
+      videoElement.muted = true
+      videoElement.playsInline = true
+      videoElement.src = '../assets/video/video.webm'
+      videoElement.className = 'illus-brand-video'
+    }
   }
 
   @HostListener('window:scroll', []) onWindowScroll() {
@@ -89,39 +103,6 @@ export class AppComponent {
     } else {
       document.body.style.overflow = 'auto'
     }
-  }
-
-  scrollToSection(sectionId: string): void {
-    const section = document.getElementById(sectionId)
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' })
-    }
-    this.openModalMobile = false
-    document.body.style.overflow = 'auto'
-  }
-
-  scrollToTop() {
-    if (this.isBrowser) {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    }
-  }
-
-  openModalImg(image: string, description: string): void {
-    this.currentImageDescription = description
-    this.currentImage = image
-    this.isModalOpen = true
-  }
-
-  closeModalImg(): void {
-    this.isModalOpen = false
-    this.currentImage = ''
-  }
-
-  currentImageWork = this.workData[this.currentIndex]
-
-  changeImage(index: number): void {
-    this.currentIndex = index
-    this.currentImageWork = this.workData[index]
   }
 
   fadeOut() {
@@ -178,6 +159,39 @@ export class AppComponent {
     } else if (swipeDistance < -50) {
       this.nextSlide()
     }
+  }
+
+  scrollToSection(sectionId: string): void {
+    const section = document.getElementById(sectionId)
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' })
+    }
+    this.openModalMobile = false
+    document.body.style.overflow = 'auto'
+  }
+
+  scrollToTop() {
+    if (this.isBrowser) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
+  openModalImg(image: string, description: string): void {
+    this.currentImageDescription = description
+    this.currentImage = image
+    this.isModalOpen = true
+  }
+
+  closeModalImg(): void {
+    this.isModalOpen = false
+    this.currentImage = ''
+  }
+
+  currentImageWork = this.workData[this.currentIndex]
+
+  changeImage(index: number): void {
+    this.currentIndex = index
+    this.currentImageWork = this.workData[index]
   }
 
   isMobile(): boolean {
