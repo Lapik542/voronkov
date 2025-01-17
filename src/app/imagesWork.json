@@ -1,0 +1,32 @@
+[
+  {
+    "main": "../assets/images/my-works/adobe.webp",
+    "blured": "../assets/images/my-works/adobe.webp",
+    "title": "ADOBE",
+    "description": "One day I saw an Adobe blog and thought, “How would I draw illustrations for this blog?”"
+  },
+  {
+    "main": "../assets/images/my-works/neuron.webp",
+    "blured": "../assets/images/my-works/neuron.webp",
+    "title": "NEURON AI",
+    "description": "Images for the \"NEURON AI\" Project Telegram Channel"
+  },
+  {
+    "main": "../assets/images/my-works/nvidia.webp",
+    "blured": "../assets/images/my-works/nvidia.webp",
+    "title": "NVIDIA",
+    "description": "Once again, “How would I draw illustrations for this blog?”. This is what I got:"
+  },
+  {
+    "main": "../assets/images/my-works/tgse.webp",
+    "blured": "../assets/images/my-works/tgse.webp",
+    "title": "TGSE",
+    "description": "A short story about the process of creating social media posts for TGSE"
+  },
+  {
+    "main": "../assets/images/my-works/unexa.webp",
+    "blured": "../assets/images/my-works/unexa.webp",
+    "title": "UNEXA",
+    "description": "A short story about the process of creating illustrations for Unexa"
+  }
+]

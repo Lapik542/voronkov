@@ -10,6 +10,8 @@ import {
   ViewChild
 } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
+import imagesWork from './imagesWork.json'
+import images from './images.json'
 
 @Component({
   selector: 'app-root',
@@ -38,80 +40,9 @@ export class AppComponent {
   customText: string = ''
   selectedPrice: string = ''
 
-  imagesWork = [
-    {
-      main: '../assets/images/my-works/adobe.webp',
-      blured: '../assets/images/my-works/adobe.webp',
-      title: 'ADOBE',
-      description:
-        'One day I saw an Adobe blog and thought, “How would I draw illustrations for this blog?”'
-    },
-    {
-      main: '../assets/images/my-works/neuron.webp',
-      blured: '../assets/images/my-works/neuron.webp',
-      title: 'NEURON AI',
-      description: 'Images for the "NEURON AI" Project Telegram Channel'
-    },
-    {
-      main: '../assets/images/my-works/nvidia.webp',
-      blured: '../assets/images/my-works/nvidia.webp',
-      title: 'NVIDIA',
-      description:
-        'Once again, “How would I draw illustrations for this blog?”. This is what I got:'
-    },
-    {
-      main: '../assets/images/my-works/tgse.webp',
-      blured: '../assets/images/my-works/tgse.webp',
-      title: 'TGSE',
-      description:
-        'A short story about the process of creating social media posts for TGSE'
-    },
-    {
-      main: '../assets/images/my-works/unexa.webp',
-      blured: '../assets/images/my-works/unexa.webp',
-      title: 'UNEXA',
-      description:
-        'A short story about the process of creating illustrations for Unexa'
-    }
-  ]
+  workData = imagesWork
 
-  images = [
-    {
-      src: '../assets/images/work-illus/ADOBE-1.webp',
-      alt: 'ADOBE',
-      description: 'ADOBE'
-    },
-    {
-      src: '../assets/images/work-illus/ADOBE.webp',
-      alt: 'ADOBE',
-      description: 'ADOBE'
-    },
-    {
-      src: '../assets/images/work-illus/ALCHEMY.webp',
-      alt: 'ALCHEMY',
-      description: 'ALCHEMY'
-    },
-    {
-      src: '../assets/images/work-illus/LEND-API.webp',
-      alt: 'LEND API',
-      description: 'LEND API'
-    },
-    {
-      src: '../assets/images/work-illus/NEURON-AI.webp',
-      alt: 'NEURON AI',
-      description: 'NEURON AI'
-    },
-    {
-      src: '../assets/images/work-illus/NVIDIA-2.webp',
-      alt: 'NVIDIA',
-      description: 'NVIDIA'
-    },
-    {
-      src: '../assets/images/work-illus/NVIDIA.webp',
-      alt: 'NVIDIA',
-      description: 'NVIDIA'
-    }
-  ]
+  images = images
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object,
@@ -186,11 +117,11 @@ export class AppComponent {
     this.currentImage = ''
   }
 
-  currentImageWork = this.imagesWork[this.currentIndex]
+  currentImageWork = this.workData[this.currentIndex]
 
   changeImage(index: number): void {
     this.currentIndex = index
-    this.currentImageWork = this.imagesWork[index]
+    this.currentImageWork = this.workData[index]
   }
 
   fadeOut() {
@@ -212,10 +143,10 @@ export class AppComponent {
     setTimeout(() => {
       this.currentIndex =
         this.currentIndex === 0
-          ? this.imagesWork.length - 1
+          ? this.workData.length - 1
           : this.currentIndex - 1
       this.fadeIn()
-      this.cdr.detectChanges() 
+      this.cdr.detectChanges()
     }, 400)
   }
 
@@ -223,11 +154,11 @@ export class AppComponent {
     this.fadeOut()
     setTimeout(() => {
       this.currentIndex =
-        this.currentIndex === this.imagesWork.length - 1
+        this.currentIndex === this.workData.length - 1
           ? 0
           : this.currentIndex + 1
       this.fadeIn()
-      this.cdr.detectChanges() 
+      this.cdr.detectChanges()
     }, 400)
   }
 
@@ -247,7 +178,6 @@ export class AppComponent {
     } else if (swipeDistance < -50) {
       this.nextSlide()
     }
-    this.cdr.detectChanges();
   }
 
   isMobile(): boolean {

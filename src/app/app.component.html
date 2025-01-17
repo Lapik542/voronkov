@@ -79,7 +79,14 @@
         >
           create illustration
         </button>
-        <video class="illus-brand-video" src=""></video>
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          class="illus-brand-video"
+          src="../assets/video/video.webm"
+        ></video>
       </div>
       <div class="cycle-shadow-bottom-right"></div>
     </section>
@@ -335,7 +342,7 @@
         </div>
         <div
           class="container-swiper-blure"
-          *ngIf="imagesWork[currentIndex]"
+          *ngIf="workData[currentIndex]"
           (touchstart)="onTouchStart($event)"
           (touchend)="onTouchEnd($event)"
         >
@@ -343,7 +350,7 @@
             <img
               draggable="false"
               class="img-blure-work"
-              [src]="imagesWork[currentIndex].blured"
+              [src]="workData[currentIndex].blured"
               alt=""
             />
           </div>
@@ -358,7 +365,7 @@
           <img
             draggable="false"
             class="image-work-frilancer"
-            [src]="imagesWork[currentIndex].main"
+            [src]="workData[currentIndex].main"
             alt=""
           />
           <img
@@ -373,10 +380,10 @@
         <div class="container-description-img-work-navigation">
           <div class="container-description-work">
             <p class="title-description">
-              {{ imagesWork[currentIndex].title }}
+              {{ workData[currentIndex].title }}
             </p>
             <p class="subtitle-description">
-              {{ imagesWork[currentIndex].description }}
+              {{ workData[currentIndex].description }}
             </p>
           </div>
         </div>
