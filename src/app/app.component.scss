@@ -61,11 +61,12 @@
 
 .nav-item.active-link {
   background: #3057ff;
-  border: #3057ff;
+  border: #3057ff 1px solid;
 }
 
 .nav-item:hover {
   background-color: #3057ff;
+  border: #3057ff 1px solid;
 }
 
 .nav-btn {
