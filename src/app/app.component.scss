@@ -1466,6 +1466,7 @@
 
 .carousel-track {
   display: flex;
+  align-items: center;
   gap: 64px;
   width: 200%;
   animation: carousel-container 40s linear infinite;
@@ -1474,6 +1475,10 @@
 .carousel-track img {
   height: 220px;
   width: auto;
+}
+
+.tgse {
+  max-height: 120px;
 }
 
 @keyframes carousel-container {
@@ -1501,6 +1506,10 @@
   .carousel-track img {
     max-width: auto;
     max-height: 190px;
+  }
+  .tgse {
+    max-width: auto;
+    max-height: 100px !important;
   }
   .carousel-track-mac {
     gap: 50px;
@@ -1536,6 +1545,10 @@
     max-width: auto;
     max-height: 130px;
   }
+  .tgse {
+    max-width: auto;
+    max-height: 90px !important;
+  }
   @keyframes carousel-container-laptop {
     0% {
       transform: translateX(0%);
@@ -1562,6 +1575,10 @@
   .carousel-track img {
     max-width: auto;
     max-height: 80px;
+  }
+  .tgse {
+    max-width: auto;
+    max-height: 70px !important;
   }
   .carousel-track-tablet {
     gap: 50px;
@@ -1595,6 +1612,10 @@
   .carousel-track-mobile img {
     min-width: auto;
     max-height: 110px;
+  }
+  .tgse {
+    max-width: auto;
+    max-height: 70px !important;
   }
   .carousel-track-mobile {
     display: flex;
