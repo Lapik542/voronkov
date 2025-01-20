@@ -144,22 +144,37 @@ export class AppComponent implements AfterViewInit {
   }
 
   onTouchStart(event: TouchEvent): void {
-    this.touchStartX = event.changedTouches[0].clientX
+    this.touchStartX = event.changedTouches[0].clientX;
   }
-
-  onTouchEnd(event: TouchEvent): void {
-    this.touchEndX = event.changedTouches[0].clientX
-    this.handleSwipe()
-  }
-
-  handleSwipe(): void {
-    const swipeDistance = this.touchEndX - this.touchStartX
+  
+  onTouchMove(event: TouchEvent): void {
+    const currentX = event.changedTouches[0].clientX;
+    const swipeDistance = currentX - this.touchStartX;
+  
     if (swipeDistance > 50) {
-      this.prevSlide()
+      this.prevSlide();
+      this.touchStartX = currentX;
     } else if (swipeDistance < -50) {
-      this.nextSlide()
+      this.nextSlide();
+      this.touchStartX = currentX;
     }
   }
+  
+  onTouchEnd(event: TouchEvent): void {
+    this.touchEndX = event.changedTouches[0].clientX;
+    this.handleSwipe();
+  }
+  
+  handleSwipe(): void {
+    const swipeDistance = this.touchEndX - this.touchStartX;
+  
+    if (swipeDistance > 50) {
+      this.prevSlide();
+    } else if (swipeDistance < -50) {
+      this.nextSlide();
+    }
+  }
+  
 
   scrollToSection(sectionId: string): void {
     const section = document.getElementById(sectionId)
