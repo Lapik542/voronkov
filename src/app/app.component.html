@@ -103,7 +103,7 @@
           <img
             draggable="false"
             class="img-phone-illus-solution"
-            src="../assets/images/phone.webp"
+            src="../assets/images/phone-illus-solution.png"
             alt=""
           />
           <div class="line-illus-solution-mobile"></div>
@@ -359,13 +359,14 @@
             class="arrow-left"
             (click)="prevSlide()"
           />
-
-          <img
-            draggable="false"
-            class="image-work-frilancer"
-            [src]="workData[currentIndex].main"
-            alt=""
-          />
+          <a [href]="workData[currentIndex].link" target="_blank">
+            <img
+              draggable="false"
+              class="image-work-frilancer"
+              [src]="workData[currentIndex].main"
+              alt=""
+            />
+          </a>
           <img
             draggable="false"
             src="../assets/images/chevron-down-right.svg"
@@ -951,14 +952,22 @@
       </div>
       <div class="info-bottom-footer">
         <div class="privacy-policy-info">
-          <a class="link-privace-policy" href="#">PRIVACY POLICY</a>
+          <a
+            class="link-privace-policy"
+            href="https://synertech.ai"
+            target="_blank"
+            >PRIVACY POLICY</a
+          >
           <p class="all-right-reserved">ALL RIGHTS RESERVED</p>
         </div>
         <div class="footer-block-info-frilancer">
           @if (isMobile()) {
             <p class="social-mobile">social</p>
           }
-          <a class="link-frilancer-portfolio" href="#" target="_blank"
+          <a
+            class="link-frilancer-portfolio"
+            href="https://www.threads.net/@voronkov.98"
+            target="_blank"
             >THREADS</a
           >
           <a

@@ -3,30 +3,35 @@
     "main": "../assets/images/my-works/adobe.webp",
     "blured": "../assets/images/my-works/adobe.webp",
     "title": "ADOBE",
-    "description": "One day I saw an Adobe blog and thought, “How would I draw illustrations for this blog?”"
+    "description": "One day I saw an Adobe blog and thought, “How would I draw illustrations for this blog?”",
+    "link": "https://www.behance.net/gallery/200260721/Illustration-for-Adoby-Blog"
   },
   {
     "main": "../assets/images/my-works/neuron.webp",
     "blured": "../assets/images/my-works/neuron.webp",
     "title": "NEURON AI",
-    "description": "Images for the \"NEURON AI\" Project Telegram Channel"
+    "description": "Images for the \"NEURON AI\" Project Telegram Channel",
+    "link": "https://www.behance.net/gallery/216738481/Social-media-posts-for-Neuron-AI"
   },
   {
     "main": "../assets/images/my-works/nvidia.webp",
     "blured": "../assets/images/my-works/nvidia.webp",
     "title": "NVIDIA",
-    "description": "Once again, “How would I draw illustrations for this blog?”. This is what I got:"
+    "description": "Once again, “How would I draw illustrations for this blog?”. This is what I got:",
+    "link": "https://www.behance.net/gallery/208046941/Illustration-for-Nvidia-Blog"
   },
   {
     "main": "../assets/images/my-works/tgse.webp",
     "blured": "../assets/images/my-works/tgse.webp",
     "title": "TGSE",
-    "description": "A short story about the process of creating social media posts for TGSE"
+    "description": "A short story about the process of creating social media posts for TGSE",
+    "link": "https://www.behance.net/gallery/207499323/Social-media-posts"
   },
   {
     "main": "../assets/images/my-works/unexa.webp",
     "blured": "../assets/images/my-works/unexa.webp",
     "title": "UNEXA",
-    "description": "A short story about the process of creating illustrations for Unexa"
+    "description": "A short story about the process of creating illustrations for Unexa",
+    "link": "https://www.behance.net/gallery/209675493/Illustrations-for-LendAPI-Blog"
   }
 ]
