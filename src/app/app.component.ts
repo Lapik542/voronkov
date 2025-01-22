@@ -143,37 +143,37 @@ export class AppComponent implements AfterViewInit {
     }, 400)
   }
 
-  onTouchStart(event: TouchEvent): void {
-    this.touchStartX = event.changedTouches[0].clientX;
-  }
+  // onTouchStart(event: TouchEvent): void {
+  //   this.touchStartX = event.changedTouches[0].clientX;
+  // }
   
-  onTouchMove(event: TouchEvent): void {
-    const currentX = event.changedTouches[0].clientX;
-    const swipeDistance = currentX - this.touchStartX;
+  // onTouchMove(event: TouchEvent): void {
+  //   const currentX = event.changedTouches[0].clientX;
+  //   const swipeDistance = currentX - this.touchStartX;
   
-    if (swipeDistance > 50) {
-      this.prevSlide();
-      this.touchStartX = currentX;
-    } else if (swipeDistance < -50) {
-      this.nextSlide();
-      this.touchStartX = currentX;
-    }
-  }
+  //   if (swipeDistance > 50) {
+  //     this.prevSlide();
+  //     this.touchStartX = currentX;
+  //   } else if (swipeDistance < -50) {
+  //     this.nextSlide();
+  //     this.touchStartX = currentX;
+  //   }
+  // }
   
-  onTouchEnd(event: TouchEvent): void {
-    this.touchEndX = event.changedTouches[0].clientX;
-    this.handleSwipe();
-  }
+  // onTouchEnd(event: TouchEvent): void {
+  //   this.touchEndX = event.changedTouches[0].clientX;
+  //   this.handleSwipe();
+  // }
   
-  handleSwipe(): void {
-    const swipeDistance = this.touchEndX - this.touchStartX;
+  // handleSwipe(): void {
+  //   const swipeDistance = this.touchEndX - this.touchStartX;
   
-    if (swipeDistance > 50) {
-      this.prevSlide();
-    } else if (swipeDistance < -50) {
-      this.nextSlide();
-    }
-  }
+  //   if (swipeDistance > 50) {
+  //     this.prevSlide();
+  //   } else if (swipeDistance < -50) {
+  //     this.nextSlide();
+  //   }
+  // }
   
 
   scrollToSection(sectionId: string): void {
@@ -240,7 +240,7 @@ export class AppComponent implements AfterViewInit {
     this.isSubmitting = true
 
     this.http
-      .post('https://voronkov-back.onrender.com/submit-form', formData)
+      .post('https://voronkov-back.vercel.app/submit-form', formData)
       .subscribe(
         (response) => {
           console.log('Form submitted successfully', response)

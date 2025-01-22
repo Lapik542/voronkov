@@ -338,12 +338,7 @@
             >watch my behance</a
           >
         </div>
-        <div
-          class="container-swiper-blure"
-          *ngIf="workData[currentIndex]"
-          (touchstart)="onTouchStart($event)"
-          (touchend)="onTouchEnd($event)"
-        >
+        <div class="container-swiper-blure" *ngIf="workData[currentIndex]">
           <div class="blure-container-my-work">
             <img
               draggable="false"

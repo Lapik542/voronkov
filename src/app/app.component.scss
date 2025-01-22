@@ -1343,7 +1343,8 @@
   }
   .arrow-left,
   .arrow-right {
-    display: none;
+    z-index: 1;
+    width: 40px;
   }
   .container-description-img-work-navigation {
     max-width: 609px;
@@ -1392,7 +1393,18 @@
   }
   .arrow-left,
   .arrow-right {
-    display: none;
+    z-index: 1;
+    width: 38px;
+    height: 38px;
+    top: 40%;
+    filter: brightness(1.4);
+    transform: scale(1.2);
+  }
+  .arrow-left {
+    left: 8px;
+  }
+  .arrow-right {
+    right: 8px;
   }
   .container-description-img-work-navigation {
     max-width: 100%;
