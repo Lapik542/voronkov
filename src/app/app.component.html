@@ -901,33 +901,33 @@
             </div>
           </div>
         </div>
-        <!-- MODAL ICON IMAGE -->
-        <div
-          *ngIf="isModalOpen && currentImage && currentImageDescription"
-          class="modal-img show"
-          (click)="closeModalImg()"
-        >
-          <div class="modal-content" (click)="$event.stopPropagation()">
-            <img draggable="false" [src]="currentImage" alt="Modal Image" />
-            <button class="close-btn" (click)="closeModalImg()">
-              <img
-                draggable="false"
-                class="close-modal-img"
-                src="../assets/images/x.svg"
-                alt=""
-              />
-            </button>
-          </div>
-          <div class="description-link-in-frilance">
-            <p class="description-image">{{ currentImageDescription }}</p>
-            <a
-              href="https://www.behance.net/voronkov-art
-              "
-              target="_blank"
-              class="link-behance-img"
-              >watch in behance</a
-            >
-          </div>
+      </div>
+      <!-- MODAL ICON IMAGE -->
+      <div
+        *ngIf="isModalOpen && currentImage && currentImageDescription"
+        class="modal-img show"
+        (click)="closeModalImg()"
+      >
+        <div class="modal-content" (click)="$event.stopPropagation()">
+          <img draggable="false" [src]="currentImage" alt="Modal Image" />
+          <button class="close-btn" (click)="closeModalImg()">
+            <img
+              draggable="false"
+              class="close-modal-img"
+              src="../assets/images/x.svg"
+              alt=""
+            />
+          </button>
+        </div>
+        <div class="description-link-in-frilance">
+          <p class="description-image">{{ currentImageDescription }}</p>
+          <a
+            href="https://www.behance.net/voronkov-art
+          "
+            target="_blank"
+            class="link-behance-img"
+            >watch in behance</a
+          >
         </div>
       </div>
       <p class="name-frilancer-footer">

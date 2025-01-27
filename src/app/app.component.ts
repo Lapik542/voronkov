@@ -158,41 +158,6 @@ export class AppComponent implements AfterViewInit {
     }
   }
 
-  // isDragging = false
-  // startX = 0
-  // scrollLeft = 0
-
-  // (mousedown)="onMouseDown($event, carusel)"
-  // (mousemove)="onMouseMove($event, carusel)"
-  // (mouseup)="onMouseUp(carusel)"
-  // (mouseleave)="onMouseUp(carusel)"
-  // (touchstart)="onTouchStart($event, carusel)"
-  // (touchmove)="onTouchMove($event, carusel)"
-  // (touchend)="onTouchEnd(carusel)"
-  // #carusel
-
-  // onMouseDown(event: MouseEvent, container: HTMLElement) {
-  //   this.isDragging = true
-  //   this.startX = event.pageX - container.offsetLeft
-  //   this.scrollLeft = container.scrollLeft
-
-  //   container.classList.add('paused')
-  //   container.style.cursor = 'grabbing'
-  // }
-
-  // onMouseMove(event: MouseEvent, container: HTMLElement) {
-  //   if (!this.isDragging) return
-  //   event.preventDefault()
-  //   const x = event.pageX - container.offsetLeft
-  //   const walk = x - this.startX
-  //   container.scrollLeft = this.scrollLeft - walk
-  // }
-
-  // onMouseUp(container: HTMLElement) {
-  //   this.isDragging = false
-  //   container.style.cursor = 'grab'
-  // }
-
   // onTouchStart(event: TouchEvent, container: HTMLElement) {
   //   this.isDragging = true
   //   this.startX = event.touches[0].pageX - container.offsetLeft
@@ -217,11 +182,21 @@ export class AppComponent implements AfterViewInit {
     this.currentImageDescription = description
     this.currentImage = image
     this.isModalOpen = true
+    if (this.isModalOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
   }
 
   closeModalImg(): void {
     this.isModalOpen = false
     this.currentImage = ''
+    if (this.isModalOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
   }
 
   currentImageWork = this.workData[this.currentIndex]

@@ -2042,6 +2042,9 @@
 .container-image-work {
   overflow: hidden;
   user-select: none;
+  overflow-x: auto; /* Додаємо можливість прокручувати */
+  -webkit-overflow-scrolling: touch; /* Для плавного скролінгу на мобільних */
+  scroll-behavior: smooth;
 }
 
 .image-caruse-work {
@@ -2157,8 +2160,8 @@
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 40px;
+  right: 40px;
   background: transparent;
   border: none;
   color: white;
@@ -2418,6 +2421,10 @@
   .btn-start-footer {
     font-size: 20px;
   }
+  .close-btn {
+    top: 20px;
+    right: 20px;
+  }
   .modal-content {
     max-width: 1115px;
     max-height: 600px;
@@ -2500,11 +2507,14 @@
   .btn-to-top-footer {
     padding: 4px;
   }
+  .close-btn {
+    top: 20px;
+    right: 20px;
+  }
   .modal-content {
     max-width: 795px;
     max-height: 434px;
   }
-
   .description-link-in-frilance {
     max-width: 795px;
     margin-top: 4px;
@@ -2773,6 +2783,10 @@
   }
   .btn-to-top-footer {
     padding: 4px;
+  }
+  .close-btn {
+    top: 20px;
+    right: 20px;
   }
   .modal-content {
     max-width: 90%;
