@@ -397,21 +397,25 @@
               >
                 <img
                   draggable="false"
+                  class="photo-adidas"
                   src="../assets/images/logo/4.webp"
                   alt="Smart"
                 />
                 <img
                   draggable="false"
                   src="../assets/images/logo/11.webp"
+                  class="photo-lego"
                   alt="Riot Games"
                 />
                 <img
                   draggable="false"
+                  class="photo-riot"
                   src="../assets/images/logo/8.webp"
                   alt="Riot Games"
                 />
                 <img
                   draggable="false"
+                  class="photo-phase"
                   src="../assets/images/logo/1.webp"
                   alt="Lego"
                 />
@@ -473,6 +477,7 @@
                 />
                 <img
                   draggable="false"
+                  class="photo-labs"
                   src="../assets/images/logo/16.webp"
                   alt="Riot Games"
                 />
@@ -482,21 +487,25 @@
               >
                 <img
                   draggable="false"
+                  class="photo-adidas"
                   src="../assets/images/logo/4.webp"
                   alt="Smart"
                 />
                 <img
                   draggable="false"
+                  class="photo-lego"
                   src="../assets/images/logo/11.webp"
                   alt="Riot Games"
                 />
                 <img
                   draggable="false"
+                  class="photo-riot"
                   src="../assets/images/logo/8.webp"
                   alt="Riot Games"
                 />
                 <img
                   draggable="false"
+                  class="photo-phase"
                   src="../assets/images/logo/1.webp"
                   alt="Lego"
                 />
@@ -558,6 +567,7 @@
                 />
                 <img
                   draggable="false"
+                  class="photo-labs"
                   src="../assets/images/logo/16.webp"
                   alt="Riot Games"
                 />
@@ -837,7 +847,9 @@
     <div class="container-footer">
       <p class="title-footer">LETS WORK TOGETHER</p>
       <div class="container-image-work">
-        <div class="container-work-img">
+        <div
+          class="container-work-img"
+        >
           <div
             class="container-carusel-work-img container-work-img-mac container-work-img-laptop container-work-img-tablet container-work-img-mobile"
           >
@@ -863,35 +875,6 @@
               </div>
             </div>
           </div>
-          <!-- MODAL ICON IMAGE -->
-          <div
-            *ngIf="isModalOpen && currentImage && currentImageDescription"
-            class="modal-img show"
-            (click)="closeModalImg()"
-          >
-            <div class="modal-content" (click)="$event.stopPropagation()">
-              <img draggable="false" [src]="currentImage" alt="Modal Image" />
-              <button class="close-btn" (click)="closeModalImg()">
-                <img
-                  draggable="false"
-                  class="close-modal-img"
-                  src="../assets/images/x.svg"
-                  alt=""
-                />
-              </button>
-            </div>
-            <div class="description-link-in-frilance">
-              <p class="description-image">{{ currentImageDescription }}</p>
-              <a
-                href="https://www.behance.net/voronkov-art
-                "
-                target="_blank"
-                class="link-behance-img"
-                >watch in behance</a
-              >
-            </div>
-          </div>
-
           <div
             class="container-carusel-work-img container-work-img-tablet container-work-img-mobile"
           >
@@ -916,6 +899,34 @@
                 />
               </div>
             </div>
+          </div>
+        </div>
+        <!-- MODAL ICON IMAGE -->
+        <div
+          *ngIf="isModalOpen && currentImage && currentImageDescription"
+          class="modal-img show"
+          (click)="closeModalImg()"
+        >
+          <div class="modal-content" (click)="$event.stopPropagation()">
+            <img draggable="false" [src]="currentImage" alt="Modal Image" />
+            <button class="close-btn" (click)="closeModalImg()">
+              <img
+                draggable="false"
+                class="close-modal-img"
+                src="../assets/images/x.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <div class="description-link-in-frilance">
+            <p class="description-image">{{ currentImageDescription }}</p>
+            <a
+              href="https://www.behance.net/voronkov-art
+              "
+              target="_blank"
+              class="link-behance-img"
+              >watch in behance</a
+            >
           </div>
         </div>
       </div>

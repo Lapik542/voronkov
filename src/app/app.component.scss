@@ -142,6 +142,7 @@
 .modal-mobile {
   position: fixed;
   top: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   background: rgba(6, 6, 6, 0.6);
@@ -1489,6 +1490,13 @@
   width: auto;
 }
 
+.photo-adidas,
+.photo-lego,
+.photo-phase,
+.photo-labs {
+  max-height: 160px;
+}
+
 .tgse {
   max-height: 120px;
 }
@@ -1498,7 +1506,7 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-101.5%);
+    transform: translateX(-101.6%);
   }
 }
 
@@ -1519,6 +1527,12 @@
     max-width: auto;
     max-height: 190px;
   }
+  .photo-adidas,
+  .photo-lego,
+  .photo-phase,
+  .photo-labs {
+    max-height: 140px !important;
+  }
   .tgse {
     max-width: auto;
     max-height: 100px !important;
@@ -1534,7 +1548,7 @@
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-101.4%);
+      transform: translateX(-101.5%);
     }
   }
 }
@@ -1625,6 +1639,12 @@
     min-width: auto;
     max-height: 110px;
   }
+  .photo-adidas,
+  .photo-lego,
+  .photo-phase,
+  .photo-labs {
+    max-height: 90px !important;
+  }
   .tgse {
     max-width: auto;
     max-height: 70px !important;
@@ -1642,7 +1662,7 @@
       transform: translateX(0%);
     }
     100% {
-      transform: translateX(-101.1%);
+      transform: translateX(-101.3%);
     }
   }
 }
@@ -2021,6 +2041,7 @@
 
 .container-image-work {
   overflow: hidden;
+  user-select: none;
 }
 
 .image-caruse-work {
@@ -2043,6 +2064,10 @@
   gap: 80px;
   width: 100%;
   animation: container-work-img 40s linear infinite;
+}
+
+.container-carusel-work-img.paused {
+  animation-play-state: paused;
 }
 
 @keyframes container-work-img {
