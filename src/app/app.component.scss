@@ -1094,6 +1094,8 @@
     max-height: 349px;
     display: flex;
     justify-self: center;
+    margin: 0 auto;
+    margin-top: 32px;
   }
   .number-info-frilancer {
     font-size: 32px;
@@ -1153,7 +1155,7 @@
     height: 100%;
     background: radial-gradient(
       circle,
-      rgba(25, 65, 238, 1),
+      rgba(25, 65, 238, 0.5),
       rgba(48, 87, 255, 0)
     );
     filter: blur(222.29998779296875px);
@@ -2867,7 +2869,7 @@
   }
   .description-link-in-frilance {
     width: 92%;
-    margin-top: 0;
+    margin-top: 12px;
   }
   .description-image {
     width: 100%;
