@@ -100,9 +100,7 @@
 }
 
 .nav-btn:hover .nav-img {
-  width: 32px;
-  height: 32px;
-  content: url('../assets/images/arrow-up-right-black.svg');
+  stroke: #060606;
 }
 
 .menu-icon {
@@ -369,10 +367,10 @@
   height: 100%;
   background: radial-gradient(
     circle,
-    rgba(25, 65, 238, 0.48),
-    rgba(48, 87, 255, 0) 80%
+    rgba(25, 65, 238, 0.5),
+    rgba(48, 87, 255, 0) 90%
   );
-  filter: blur(222.29998779296875px);
+  filter: blur(200.29998779296875px);
 }
 
 .cycle-shadow-bottom-right {
@@ -385,7 +383,7 @@
   height: 100%;
   background: radial-gradient(
     circle,
-    rgba(25, 65, 238, 0.48),
+    rgba(25, 65, 238, 0.5),
     rgba(48, 87, 255, 0)
   );
   filter: blur(222.29998779296875px);
@@ -767,8 +765,13 @@
 // ABOUT ME
 
 .about-me {
+  padding: 0 1px;
+  padding-bottom: 120px;
+}
+
+.container-about-me {
   padding: 120px 100px;
-  z-index: 1;
+  padding-bottom: 0;
 }
 
 .container-about-me {
@@ -799,7 +802,7 @@
   font-family: 'Nata Sans';
   font-size: 80px;
   font-style: normal;
-  font-weight: 740;
+  font-weight: 700;
   line-height: normal;
   text-transform: uppercase;
   display: flex;
@@ -851,17 +854,40 @@
 }
 
 .btn-block-about-me:hover .arrow-block-about-me {
-  content: url('../assets/images/arrow-up-right-black.svg');
-  max-width: 40px;
-  max-height: 40px;
-  width: 100%;
-  height: 100%;
+  stroke: #060606;
+}
+
+.photo-frilancer-about-me {
+  width: 555px;
+  height: 609px;
+  flex-shrink: 0;
+  margin-top: 42px;
+}
+
+.container-photo-cycle-aboute-me {
+  position: relative;
 }
 
 .block-about-me-fidback {
   display: flex;
   justify-content: space-between;
   align-items: end;
+}
+
+.cycle-about-me {
+  position: absolute;
+  top: 0;
+  max-width: 617px;
+  max-height: 617px;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    rgba(25, 65, 238, 0.6),
+    rgba(48, 87, 255, 0)
+  );
+  filter: blur(222.29998779296875px);
+  z-index: -1;
 }
 
 .info-frilancer-about-me {
@@ -898,9 +924,16 @@
   font-weight: 400;
 }
 
+.line-about-me {
+  width: 100%;
+  height: 2px;
+  background: rgba(249, 249, 249, 0.3);
+}
+
 @media (max-width: 1919px) and (min-width: 1512px) {
-  .about-me {
+  .container-about-me {
     padding: 120px 80px;
+    padding-bottom: 0;
   }
   .title-block-about-me {
     margin-bottom: 80px;
@@ -917,8 +950,9 @@
     margin-bottom: 140px;
   }
   .photo-frilancer-about-me {
-    max-width: 464px;
-    max-height: 479px;
+    width: 465px;
+    height: 509px;
+    margin: 0;
   }
   .number-info-frilancer {
     font-size: 48px;
@@ -929,9 +963,6 @@
 }
 
 @media (max-width: 1511px) and (min-width: 1200px) {
-  .about-me {
-    padding: 80px 60px;
-  }
   .title-block-about-me {
     margin-bottom: 40px;
   }
@@ -941,12 +972,14 @@
   }
   .info-block-about-me {
     font-size: 13px;
-    margin-bottom: 130px;
+    margin-bottom: 140px;
     max-width: 570px;
   }
   .photo-frilancer-about-me {
-    max-width: 413px;
-    max-height: 423px;
+    width: 413px;
+    height: 451px;
+    flex-shrink: 0;
+    margin: 0;
   }
   .info-frilancer-about-me {
     gap: 16px;
@@ -968,8 +1001,9 @@
 }
 
 @media (max-width: 1199px) and (min-width: 768px) {
-  .about-me {
-    padding: 60px 32px;
+  .container-about-me {
+    padding: 0px 32px;
+    padding-top: 60px;
   }
   .container-about-me {
     display: block;
@@ -989,6 +1023,7 @@
   .photo-frilancer-about-me {
     max-width: 328px;
     max-height: 333px;
+    margin: 0;
   }
   .info-frilancer-about-me {
     gap: 16px;
@@ -1017,6 +1052,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 16px;
   }
   .info-frilancer-about-me {
     gap: 16px;
@@ -1025,13 +1061,17 @@
 
 @media (max-width: 767px) and (min-width: 320px) {
   .about-me {
-    padding: 40px 16px;
+    padding: 0;
+  }
+  .container-about-me {
+    padding: 40px 0px;
   }
   .container-about-me {
     display: block;
   }
   .title-block-about-me {
     margin-bottom: 12px;
+    padding: 0 16px;
   }
   .title-block-about-me {
     font-size: 40px;
@@ -1040,22 +1080,27 @@
     flex-wrap: wrap;
     font-size: 38px;
     gap: 4px;
+    padding: 0 16px;
   }
   .info-block-about-me {
     font-size: 11px;
     max-width: 100%;
     margin-bottom: 8px;
     margin-top: 16px;
+    padding: 0 16px;
   }
   .photo-frilancer-about-me {
-    max-width: 100%;
-    max-height: 100%;
+    max-width: 320px;
+    max-height: 349px;
+    display: flex;
+    justify-self: center;
   }
   .number-info-frilancer {
     font-size: 32px;
   }
   .block-info-frilancer {
     gap: 4px;
+    padding: 0 16px;
   }
   .text-info-frilancer {
     font-size: 11px;
@@ -1067,6 +1112,7 @@
   .btn-block-about-me {
     padding: 10px 16px;
     font-size: 16px;
+    margin: 0 16px;
     margin-top: 16px;
   }
   .btn-block-about-me:hover {
@@ -1098,6 +1144,29 @@
     gap: 0;
     justify-content: space-between;
   }
+  .cycle-about-me {
+    position: absolute;
+    top: 0;
+    max-width: 100%;
+    max-height: 349px;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+      circle,
+      rgba(25, 65, 238, 1),
+      rgba(48, 87, 255, 0)
+    );
+    filter: blur(222.29998779296875px);
+    z-index: -1;
+  }
+  .line-about-me {
+    display: none;
+  }
+  .line-about-me-mobile {
+    width: 100%;
+    height: 2px;
+    background: rgba(249, 249, 249, 0.3);
+  }
 }
 
 // MY WORKS
@@ -1111,6 +1180,7 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  align-items: start;
 }
 
 .title-my-works {
@@ -1478,6 +1548,7 @@
 }
 
 .carousel-track {
+  justify-content: space-between;
   display: flex;
   align-items: center;
   gap: 64px;
@@ -1493,7 +1564,8 @@
 .photo-adidas,
 .photo-lego,
 .photo-phase,
-.photo-labs {
+.photo-labs,
+.photo-riot {
   max-height: 160px;
 }
 
@@ -1530,7 +1602,8 @@
   .photo-adidas,
   .photo-lego,
   .photo-phase,
-  .photo-labs {
+  .photo-labs,
+  .photo-riot {
     max-height: 140px !important;
   }
   .tgse {
@@ -2347,7 +2420,7 @@
 }
 
 .btn-start-footer:hover .img-btn-footer {
-  content: url('../assets/images/arrow-up-right-black.svg');
+  stroke: #060606;
 }
 
 .btn-to-top-footer:hover {
@@ -2355,7 +2428,7 @@
 }
 
 .btn-to-top-footer:hover .img-btn-to-top-footer {
-  content: url('../assets/images/arrow-up-black.svg');
+  stroke: #060606;
 }
 
 ::ng-deep .lightbox-container {
@@ -2789,12 +2862,12 @@
     right: 20px;
   }
   .modal-content {
-    max-width: 90%;
-    max-height: 22%;
+    max-width: 92%;
+    max-height: 30%;
   }
   .description-link-in-frilance {
-    width: 90%;
-    margin-top: 8px;
+    width: 92%;
+    margin-top: 0;
   }
   .description-image {
     width: 100%;
@@ -2804,6 +2877,9 @@
     text-align: end;
     width: 100%;
     font-size: 14px;
+  }
+  .modal-img {
+    height: 100%;
   }
   .close-modal-img {
     max-width: 33px;

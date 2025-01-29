@@ -40,12 +40,29 @@
   </nav>
   <button class="nav-btn" (click)="openModal()" (click)="selectPack('custom')">
     let's start
-    <img
-      draggable="false"
-      class="nav-img"
-      src="../assets/images/arrow-up-right.svg"
-      alt="arrow"
-    />
+    <svg
+      width="31"
+      height="31"
+      viewBox="0 0 31 31"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        class="nav-img"
+        d="M9 22L21 10"
+        stroke="#F9F9F9"
+        stroke-width="3"
+        stroke-linecap="square"
+        stroke-linejoin="round"
+      />
+      <path
+        class="nav-img"
+        d="M9.04199 9.04169H21.9587V21.9584"
+        stroke="#F9F9F9"
+        stroke-width="3"
+        stroke-linecap="square"
+      />
+    </svg>
   </button>
   <div
     class="menu-icon"
@@ -267,12 +284,17 @@
                   </button>
                 </div>
               </div>
-              <img
-                draggable="false"
-                class="photo-frilancer-about-me"
-                src="../assets/images/photo-frilancer.png"
-                alt=""
-              />
+              <div></div>
+              <div class="container-photo-cycle-aboute-me">
+                <img
+                  draggable="false"
+                  class="photo-frilancer-about-me"
+                  src="../assets/images/photo-frilancer.png"
+                  alt=""
+                />
+                <div class="line-about-me-mobile"></div>
+                <div class="cycle-about-me"></div>
+              </div>
             </div>
           </div>
         } @else {
@@ -293,12 +315,29 @@
                 (click)="scrollToSection('footer')"
               >
                 contacts
-                <img
-                  draggable="false"
-                  class="arrow-block-about-me"
-                  src="../assets/images/arrow-up-right.svg"
-                  alt=""
-                />
+                <svg
+                  width="31"
+                  height="31"
+                  viewBox="0 0 31 31"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="arrow-block-about-me"
+                    d="M9 22L21 10"
+                    stroke="#F9F9F9"
+                    stroke-width="3"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    class="arrow-block-about-me"
+                    d="M9.04199 9.04169H21.9587V21.9584"
+                    stroke="#F9F9F9"
+                    stroke-width="3"
+                    stroke-linecap="square"
+                  />
+                </svg>
               </button>
               <div class="info-frilancer-about-me">
                 <div class="block-info-frilancer">
@@ -316,14 +355,18 @@
               </div>
             </div>
           </div>
-          <img
-            draggable="false"
-            class="photo-frilancer-about-me"
-            src="../assets/images/photo-frilancer.png"
-            alt=""
-          />
+          <div class="container-photo-cycle-aboute-me">
+            <img
+              draggable="false"
+              class="photo-frilancer-about-me"
+              src="../assets/images/photo-frilancer.png"
+              alt=""
+            />
+            <div class="cycle-about-me"></div>
+          </div>
         }
       </div>
+      <div class="line-about-me"></div>
     </section>
 
     <!-- SECTION MY WORKS -->
@@ -847,9 +890,7 @@
     <div class="container-footer">
       <p class="title-footer">LETS WORK TOGETHER</p>
       <div class="container-image-work">
-        <div
-          class="container-work-img"
-        >
+        <div class="container-work-img">
           <div
             class="container-carusel-work-img container-work-img-mac container-work-img-laptop container-work-img-tablet container-work-img-mobile"
           >
@@ -1002,20 +1043,67 @@
               (click)="selectPack('custom')"
             >
               let's start
-              <img
-                draggable="false"
-                class="img-btn-footer"
-                src="../assets/images/arrow-up-right.svg"
-                alt=""
-              />
+              <svg
+                width="31"
+                height="31"
+                viewBox="0 0 31 31"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="img-btn-footer"
+                  d="M9 22L21 10"
+                  stroke="#F9F9F9"
+                  stroke-width="3"
+                  stroke-linecap="square"
+                  stroke-linejoin="round"
+                />
+                <path
+                  class="img-btn-footer"
+                  d="M9.04199 9.04169H21.9587V21.9584"
+                  stroke="#F9F9F9"
+                  stroke-width="3"
+                  stroke-linecap="square"
+                />
+              </svg>
             </button>
             <button class="btn-to-top-footer" (click)="scrollToTop()">
-              <img
-                draggable="false"
+              <svg
                 class="img-btn-to-top-footer"
-                src="../assets/images/arrow-up.svg"
-                alt=""
-              />
+                width="52"
+                height="52"
+                viewBox="0 0 52 52"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_515_3072)">
+                  <path
+                    class="img-btn-to-top-footer"
+                    d="M26 36.6067L25.9997 16.1465"
+                    stroke="#F9F9F9"
+                    stroke-width="3"
+                    stroke-linecap="square"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    class="img-btn-to-top-footer"
+                    d="M15.3933 26L25.9999 15.3934L36.6065 26"
+                    stroke="#F9F9F9"
+                    stroke-width="3"
+                    stroke-linecap="square"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_515_3072">
+                    <rect
+                      width="36"
+                      height="36"
+                      fill="white"
+                      transform="translate(0.544189 26) rotate(-45)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
             </button>
           </div>
         </div>
