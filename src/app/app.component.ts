@@ -158,26 +158,6 @@ export class AppComponent implements AfterViewInit {
     }
   }
 
-  // onTouchStart(event: TouchEvent, container: HTMLElement) {
-  //   this.isDragging = true
-  //   this.startX = event.touches[0].pageX - container.offsetLeft
-  //   this.scrollLeft = container.scrollLeft
-
-  //   container.classList.add('paused')
-  // }
-
-  // onTouchMove(event: TouchEvent, container: HTMLElement) {
-  //   if (!this.isDragging) return
-  //   const x = event.touches[0].pageX - container.offsetLeft
-  //   const walk = x - this.startX
-  //   container.scrollLeft = this.scrollLeft - walk
-  // }
-
-  // onTouchEnd(container: HTMLElement) {
-  //   this.isDragging = false
-  //   container.classList.remove('paused')
-  // }
-
   openModalImg(image: string, description: string): void {
     this.currentImageDescription = description
     this.currentImage = image
